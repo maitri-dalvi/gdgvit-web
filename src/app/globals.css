@@ -1,26 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 20 44% 99%; 
+    --foreground: 0 0% 5%;
+
+    --primary: 225 64% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent-1: 39 100% 74%;
+    --accent-2: 17 90% 61%;
+    --accent-3: 56 93% 54%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #FDFAF5;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none' stroke='%23333333' stroke-opacity='0.1' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+    background-position: center;
+    background-repeat: repeat;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
