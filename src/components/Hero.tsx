@@ -32,12 +32,9 @@ const Hero = () => {
   };
 
 
-
-  
-
   return (
-    <div className='relative min-h-screen overflow-hidden mt-14'>
-      <div className='container mx-auto px-45 pt-8 md:pt-20 lg:pt-0 relative'>
+    <div className='relative min-h-screen overflow-hidden mt-14 px-4 md:px-8 lg:px-16'>
+      <div className='container mx-auto px-40 pt-8 md:pt-20 lg:pt-0 relative'>
         <motion.h1
           ref={headingRef}
           className='text-6xl md:text-7xl lg:text-8xl font-bold mx-auto text-center lg:mt-20 mb-12'
@@ -67,23 +64,22 @@ const Hero = () => {
               />
             </svg>
           </span>{" "}
-          Groups On Campus
+          Groups On Campus 
         </motion.h1>
 
-
-        <div className='hidden md:block absolute top-5 lg:-top-20 lg:left-80 text-yellow-mango -rotate-12'>
+        <div className='hidden md:block absolute top-5  lg:-top-20 lg:left-80 text-yellow-mango -rotate-12'>
           <Sparkle fill='#FFD37D' width={90} height={90} />
         </div>
-        <div className='hidden md:block absolute top-48 lg:top-40 right-8 lg:right-64 text-orange rotate-12'>
+        <div className='hidden md:block absolute top-48 mt-9 lg:top-40 right-8 lg:right-64 text-orange rotate-12'>
           <Sparkle fill='#F57642' width={80} height={80} />
         </div>
-        <div className='hidden md:block absolute top-24 mt-20 lg:top-20 lg:left-48 text-blue-light font-bold text-[7rem] lg:text-[9rem] -rotate-12'>
+        <div className='hidden md:block absolute top-24 mt-29 lg:top-20 lg:left-48 text-blue-light font-bold text-[7rem] lg:text-[9rem] -rotate-12'>
           <AngularBracket1 />
         </div>
         <div className='hidden md:block absolute top-0 lg:-top-20 right-10 lg:right-56 text-blue-dark font-bold text-8xl lg:text-9xl -rotate-12'>
           <AngularBracket2 />
         </div>
-        <Typewriter text="Converting Ideas Into Reality!" className="text-center text-2xl md:text-3xl lg:text-4xl font-semibold mt-15 lg:mt-20 text-gray-800" />
+        <Typewriter text="Converting Ideas Into Reality!" className="text-center text-2xl md:text-3xl lg:text-4xl font-semibold mt-20 lg:mt-20 text-gray-800" />
       </div>
     </div>
   )

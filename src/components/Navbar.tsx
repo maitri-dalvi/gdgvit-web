@@ -4,11 +4,11 @@ import { FaXTwitter, FaGithub, FaInstagram, FaYoutube, FaMedium, FaGoogle, FaLin
 
 const Navbar = () => {
   const navItems = [
-    "Everything",
-    "XXX",
-    "XXX",
-    "XXX",
-    "XXX",
+    "Spectrum",
+    "Events",
+    "Gallery",
+    "Team",
+    "Join Us",
   ]
 
   const socialIcons = [
@@ -22,7 +22,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="w-full sticky top-0 z-50">
+    <nav className="w-full sticky top-0 z-50 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
         <a href="/"
           className="flex items-center gap-2 text-purple-800 font-extrabold text-3xl tracking-tight mb-4 md:mb-0">gdg_vit</a>
