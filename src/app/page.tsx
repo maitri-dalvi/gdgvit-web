@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import CommunityVoices from "@/components/CommunityVoices";
+import FAQSection from "@/components/FAQSection";
 import TimelineSection from "@/components/TimelineSection";
 import Footer from "@/components/Footer";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -15,7 +15,7 @@ export default function Home() {
       <FeaturesSection />
       <TimelineSection />
       <Moments />
-      <CommunityVoices />
+      <FAQSection />
       <Footer />
     </div>
     </>
