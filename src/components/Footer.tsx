@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className='bg-black text-white rounded-tr-[100px]'>
-      <div className='container mx-auto py-14 font-mono px-4 md:px-8 lg:px-16'>
+      <div className='container mx-auto py-14 px-4 md:px-8 lg:px-20'>
 
         {/* Social Icons Row */}
 
@@ -35,11 +35,11 @@ const Footer = () => {
         </div>
 
         {/* Copyright and Contact */}
-        <p className="text-sm text-zinc-300 mb-2">
+        <p className="text-lg text-zinc-300 mb-2">
           Copyright © 2025 GDG VIT. Open Source.
         </p>
 
-        <p className="flex items-center gap-2 text-pink-400 mb-4">
+        <p className="flex items-center gap-2 text-pink-400 mb-4 text-lg">
           <MdEmail className="text-xl" />
           <a
             href="mailto:gdgoncampus.vit@gmail.com"
@@ -50,7 +50,7 @@ const Footer = () => {
         </p>
 
         {/* Location Info */}
-        <p className="text-sm text-zinc-300 mb-5">
+        <p className="text-lg text-zinc-300 mb-5">
           GDG VIT operates from Vidyalankar Institute of Technology,
           <br />
           Wadala, Mumbai, Maharashtra,
@@ -59,7 +59,7 @@ const Footer = () => {
         </p>
 
         {/* Terminal Style Tagline */}
-        <p className="text-sm text-zinc-400 italic">sudo rm -rf negativity/</p>
+        <p className="text-lg text-zinc-400 italic">sudo rm -rf negativity/</p>
 
       </div>
     </footer>
