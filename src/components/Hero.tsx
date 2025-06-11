@@ -67,8 +67,7 @@ const Hero = () => {
           Groups On Campus 
           <br />
           VIT Mumbai
-        </motion.h1>
-
+        </motion.h1>  
         <div className='hidden md:block absolute top-5  lg:-top-20 lg:left-80 text-yellow-mango -rotate-12'>
           <Sparkle fill='#FFD37D' width={90} height={90} />
         </div>

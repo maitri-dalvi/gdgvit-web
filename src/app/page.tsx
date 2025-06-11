@@ -4,6 +4,7 @@ import CommunityVoices from "@/components/CommunityVoices";
 import TimelineSection from "@/components/TimelineSection";
 import Footer from "@/components/Footer";
 import FeaturesSection from "@/components/FeaturesSection";
+import Moments from "@/components/Moments";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <FeaturesSection />
       <TimelineSection />
+      <Moments />
       <CommunityVoices />
       <Footer />
     </div>
