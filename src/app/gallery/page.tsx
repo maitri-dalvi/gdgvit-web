@@ -1,59 +1,91 @@
-'use client';
-
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import React from 'react';
+
 
 const Gallery = () => {
-  return (
-    <div>
-      <Navbar />
+  const images = [
+    // First gallery grid images
+    { size: "600x400", src: "/images/1.jpg" },
+    { size: "300x400", src: "/images/2.jpg" },
+    { size: "300x200", src: "/images/3.jpg" },
+    { size: "300x200", src: "/images/4.jpg" },
+    { size: "400x250", src: "/images/5.jpg" },
+    { size: "400x250", src: "/images/6.jpg" },
+    { size: "400x250", src: "/images/7.jpg" },
+    { size: "300x250", src: "/images/8.jpg" },
+    { size: "300x250", src: "/images/9.jpg" },
+    { size: "600x250", src: "/images/10.jpg" },
+    // Second gallery grid images
+    { size: "600x400", src: "/images/11.jpg" },
+    { size: "300x400", src: "/images/12.jpg" },
+    { size: "300x200", src: "/images/13.jpg" },
+    { size: "300x200", src: "/images/14.jpg" },
+    { size: "400x250", src: "/images/15.jpg" },
+    { size: "400x250", src: "/images/16.jpg" },
+    { size: "400x250", src: "/images/17.jpg" },
+    { size: "300x250", src: "/images/18.jpg" },
+    { size: "300x250", src: "/images/19.jpg" },
+    { size: "600x250", src: "/images/20.jpg" },
+  ];
 
-      <section className="p-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-6 auto-rows-[150px] gap-4">
-          {/* Bento Grid Items */}
-          <div className="col-span-3 row-span-2">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
+  interface PlaceholderImageProps {
+    size: string;
+    src: string;
+  }
 
-          <div className="col-span-2 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
+  const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
+    const [width, height] = size.split('x').map(Number);
+    return (
+      <img
+        src={src}
+        alt="Gallery item"
+        width={width}
+        height={height}
+        className="w-full h-full object-cover"
+      />
+    );
+  };
 
-          <div className="col-span-1 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
+  interface GridItemProps {
+    colSpan: number;
+    rowSpan: number;
+    imageIndex: number;
+  }
 
-          <div className="col-span-2 row-span-2">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-
-          <div className="col-span-2 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-
-          <div className="col-span-2 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-
-          <div className="col-span-3 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-
-          <div className="col-span-3 row-span-2">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-
-          <div className="col-span-2 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-
-          <div className="col-span-1 row-span-1">
-            <img src="/placeholder.svg" alt="placeholder" className="w-full h-full object-cover rounded-xl" />
-          </div>
-        </div>
-      </section>
+  const GridItem: React.FC<GridItemProps> = ({ colSpan, rowSpan, imageIndex }) => (
+    <div className={`col-span-${colSpan} row-span-${rowSpan} bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:ring-1 hover:ring-slate-300 transition-all duration-300`}>
+      <PlaceholderImage size={images[imageIndex].size} src={images[imageIndex].src} />
     </div>
+  );
+
+  const GalleryGrid = ({ startIndex = 0 }) => (
+    <div className="grid grid-cols-12 grid-rows-10 gap-4 h-[1000px]">
+      <GridItem colSpan={6} rowSpan={4} imageIndex={startIndex + 0} />
+      <GridItem colSpan={3} rowSpan={4} imageIndex={startIndex + 1} />
+      <GridItem colSpan={3} rowSpan={2} imageIndex={startIndex + 2} />
+      <GridItem colSpan={3} rowSpan={2} imageIndex={startIndex + 3} />
+      <GridItem colSpan={4} rowSpan={3} imageIndex={startIndex + 4} />
+      <GridItem colSpan={4} rowSpan={3} imageIndex={startIndex + 5} />
+      <GridItem colSpan={4} rowSpan={3} imageIndex={startIndex + 6} />
+      <GridItem colSpan={3} rowSpan={3} imageIndex={startIndex + 7} />
+      <GridItem colSpan={3} rowSpan={3} imageIndex={startIndex + 8} />
+      <GridItem colSpan={6} rowSpan={3} imageIndex={startIndex + 9} />
+    </div>
+  );
+
+  return (
+    <>
+    <Navbar />
+    <div className="max-w-7xl mx-auto p-6 pt-8 pb-25">
+      <div className="space-y-4">
+        <GalleryGrid startIndex={0} />
+        <GalleryGrid startIndex={10} />
+      </div>
+    </div>
+    <Footer />
+    </>
   );
 };
 
 export default Gallery;
-
