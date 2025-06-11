@@ -59,7 +59,7 @@ const Footer = () => {
         </p>
 
         {/* Terminal Style Tagline */}
-        <p className="text-sm text-zinc-400 italic">:wq // peace out</p>
+        <p className="text-sm text-zinc-400 italic">sudo rm -rf negativity/</p>
 
       </div>
     </footer>

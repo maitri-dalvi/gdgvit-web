@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import CommunityVoices from "@/components/CommunityVoices";
 import TimelineSection from "@/components/TimelineSection";
 import Footer from "@/components/Footer";
+import FeaturesSection from "@/components/FeaturesSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
     <div className='min-h-screen relative z-10 '>
       <Navbar />
       <Hero />
+      <FeaturesSection />
       <TimelineSection />
       <CommunityVoices />
       <Footer />
