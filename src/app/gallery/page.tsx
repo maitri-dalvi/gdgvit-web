@@ -1,7 +1,9 @@
+"use client";
+
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import React from 'react';
-
+import { motion } from 'framer-motion';
 
 const Gallery = () => {
   const images = [
@@ -54,9 +56,20 @@ const Gallery = () => {
   }
 
   const GridItem: React.FC<GridItemProps> = ({ colSpan, rowSpan, imageIndex }) => (
-    <div className={`col-span-${colSpan} row-span-${rowSpan} bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:ring-1 hover:ring-slate-300 transition-all duration-300`}>
+    <motion.div
+      className={`col-span-${colSpan} row-span-${rowSpan} bg-white rounded-xl overflow-hidden shadow-sm ring-0`}
+      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileHover={{ scale: 1.03 }}
+      transition={{
+        duration: 0.4,
+        ease: 'easeOut',
+        type: 'tween',
+      }}
+      viewport={{ once: true }}
+    >
       <PlaceholderImage size={images[imageIndex].size} src={images[imageIndex].src} />
-    </div>
+    </motion.div>
   );
 
   const GalleryGrid = ({ startIndex = 0 }) => (
@@ -76,14 +89,14 @@ const Gallery = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="max-w-7xl mx-auto p-6 pt-8 pb-25">
-      <div className="space-y-4">
-        <GalleryGrid startIndex={0} />
-        <GalleryGrid startIndex={10} />
+      <Navbar />
+      <div className="max-w-7xl mx-auto p-6 pt-8 pb-25">
+        <div className="space-y-4">
+          <GalleryGrid startIndex={0} />
+          <GalleryGrid startIndex={10} />
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };
