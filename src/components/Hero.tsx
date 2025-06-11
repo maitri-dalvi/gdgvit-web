@@ -33,7 +33,7 @@ const Hero = () => {
 
 
   return (
-    <div className='relative min-h-screen overflow-hidden mt-14 px-4 md:px-8 lg:px-16'>
+    <div className='relative min-h-screen overflow-hidden mt-18 px-4 md:px-8 lg:px-16'>
       <div className='container mx-auto px-40 pt-8 md:pt-20 lg:pt-0 relative'>
         <motion.h1
           ref={headingRef}
@@ -65,6 +65,8 @@ const Hero = () => {
             </svg>
           </span>{" "}
           Groups On Campus 
+          <br />
+          VIT Mumbai
         </motion.h1>
 
         <div className='hidden md:block absolute top-5  lg:-top-20 lg:left-80 text-yellow-mango -rotate-12'>
