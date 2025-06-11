@@ -85,7 +85,7 @@ const Moments = () => {
       </div>
 
       {/* Animated Image Only */}
-      <div className="w-full max-w-4xl mt-2 px-2 mb-7">
+      <div className="w-full max-w-5xl mt-2 px-2 mb-7">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeEvent.id}
@@ -98,7 +98,7 @@ const Moments = () => {
             <img
               src={activeEvent.image}
               alt={activeEvent.title}
-              className="rounded-lg object-cover mb-2 w-full h-[400px]"
+              className="rounded-lg object-cover mb-2 w-full h-[445px]"
             />
           </motion.div>
         </AnimatePresence>
