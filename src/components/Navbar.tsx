@@ -1,4 +1,6 @@
 'use client';
+
+import Link from 'next/link'; 
 import {
   FaXTwitter,
   FaGithub,
@@ -62,13 +64,14 @@ const Navbar = () => {
     <nav className="w-full top-0 z-50 pt-1 px-4 md:px-8 lg:px-16">
       <div className="relative container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Left: Logo */}
-        <a
+        <Link
           href="/"
           className="flex-shrink-0 text-purple-800 font-extrabold text-3xl tracking-tight"
         >
           gdg_vit
-        </a>
+        </Link>
 
+        {/* Center: Nav Items */}
         <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-6">
           {navItems.map(({ label, href, external }) =>
             external ? (
@@ -82,16 +85,17 @@ const Navbar = () => {
                 {label}
               </a>
             ) : (
-              <a
+              <Link
                 key={label}
                 href={href}
                 className="text-purple-700 text-md font-medium hover:underline underline-offset-4 transition-all"
               >
                 {label}
-              </a>
+              </Link>
             )
           )}
         </div>
+
         {/* Right: Social Icons */}
         <div className="flex items-center gap-4">
           {socialIcons.map(({ icon, href }, index) => (

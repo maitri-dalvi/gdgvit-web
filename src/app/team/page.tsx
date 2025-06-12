@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 type TeamMembers = {
   name: string;
@@ -151,11 +152,13 @@ export default function Team() {
               viewport={{ once: true }}
             >
               {/* Image */}
-              <div className="w-full md:w-1/3">
-                <img
+              <div className="w-full md:w-1/3 relative aspect-square">
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-auto aspect-square object-cover rounded-xl"
+                  fill
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
 

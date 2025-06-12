@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface AngularBracketProps {
   className?: string;
@@ -10,13 +11,13 @@ interface AngularBracketProps {
 
 const AngularBracket = ({
   className = "",
-  src = "/gdglogo.png", 
+  src = "/gdglogo.png",
   alt = "less-than",
   width = 140,
   height = 140,
 }: AngularBracketProps) => {
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
       width={width}

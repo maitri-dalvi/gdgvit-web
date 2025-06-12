@@ -3,6 +3,7 @@
 import React, { useRef } from "react"
 import AngularBracket from "./icons/AngularBracket"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
+import Image from "next/image";
 
 const FeaturesSection = () => {
 
@@ -95,7 +96,7 @@ const FeaturesSection = () => {
             className='h-[70vh] w-[80vw] lg:w-[60vh] p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3'
           >
             <p className='text-gray-300 text-xl font-medium'>
-              We believe in thinking beyond the conventional. A club’s resources shouldn't just be directed toward organizing events, but also towards fostering a culture of continuous learning and collaborative growth. With that in mind, we host flagship events like <span className="text-blue-400">Hackbuild, Capture the Flag (CTF), and Competitive Programming under Spectrum</span>, along with a wide range of insightful workshops.
+              We believe in thinking beyond the conventional. A club&apos;s resources shouldn&apos;t just be directed toward organizing events, but also towards fostering a culture of continuous learning and collaborative growth. With that in mind, we host flagship events like <span className="text-blue-400">Hackbuild, Capture the Flag (CTF), and Competitive Programming under Spectrum</span>, along with a wide range of insightful workshops.
             </p>
             
           </motion.div>
@@ -109,7 +110,7 @@ const FeaturesSection = () => {
           >
             <h3 className='text-4xl font-bold mb-4'>Our Story</h3>
             <p className='text-gray-300 text-xl font-medium'>
-              Started in 2021 as Google Developer Student Clubs (GDSC), the club transitioned to GDG on Campus in 2024. It’s been an incredible 5-year journey of innovation, collaboration, and growth — a community proudly powered by <span className="text-green-400">GoogleForDevs</span>. Over the years, we've empowered countless students to build & learn.
+              Started in 2021 as Google Developer Student Clubs (GDSC), the club transitioned to GDG on Campus in 2024. It&apos;s been an incredible 5-year journey of innovation, collaboration, and growth — a community proudly powered by <span className="text-green-400">GoogleForDevs</span>. Over the years, we&apos;ve empowered countless students to build & learn.
             </p>
             
           </motion.div>
@@ -161,11 +162,15 @@ const FeaturesSection = () => {
               </motion.div>
 
               {/* GIF Badge */}
-              <img
-                src='/globe.gif' 
+              
+              <Image
+                src='/globe.gif'
                 alt='Animated Globe'
-                className='absolute -right-11 top-1/2 -translate-y-1/2 w-60 h-50'
+                width={240}
+                height={200}
+                className='absolute -right-11 top-1/2 -translate-y-1/2'
               />
+
             </div>
           </motion.div>
         </motion.div>

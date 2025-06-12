@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Gallery = () => {
   const images = [
@@ -36,23 +37,26 @@ const Gallery = () => {
     src: string;
   }
 
-  const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
-    const [width, height] = size.split('x').map(Number);
-    const aspectRatio = width / height;
-    
-    return (
-      <div 
-        className="w-full h-full relative overflow-hidden"
-        style={{ aspectRatio: aspectRatio.toString() }}
-      >
-        <img
-          src={src}
-          alt="Gallery item"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
-    );
-  };
+const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
+  const [width, height] = size.split('x').map(Number);
+  const aspectRatio = width / height;
+
+  return (
+    <div 
+      className="w-full h-full relative overflow-hidden"
+      style={{ aspectRatio: aspectRatio.toString() }}
+    >
+      <Image
+        src={src}
+        alt="Gallery item"
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 33vw"
+        priority={false}
+      />
+    </div>
+  );
+};
 
   interface GridItemProps {
     colSpan: number;
