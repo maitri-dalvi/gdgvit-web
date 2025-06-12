@@ -122,7 +122,7 @@ const team: TeamMembers[] = [
 ];
 
 const bgColors: string[] = [
-  '#deffff', '#deffff', '#E6F0FF', '#E6F0FF',
+  '#e6ffff', '#e6ffff', '#E6F0FF', '#E6F0FF',
   '#FFE6E6', '#FFE6E6', '#fff9e6', '#fff9e6',
   '#ebffde', '#ebffde',
 ];
