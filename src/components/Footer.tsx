@@ -21,7 +21,7 @@ const Footer = () => {
 
         {/* Social Icons Row */}
 
-        <div className="flex justify-start items-center gap-4 mb-5 mt-4 text-pink-400 text-3xl">
+        <div className="flex justify-start items-center gap-4 mb-5 mt-5 text-pink-400 text-3xl">
           {socialIcons.map(({ icon, href }, index) => (
             <a
               key={index}
@@ -39,7 +39,7 @@ const Footer = () => {
           Copyright © 2025 GDG VIT. Open Source.
         </p>
 
-        <p className="flex items-center gap-2 text-pink-400 mb-4 text-lg">
+        <p className="flex items-center gap-2 text-pink-400 mb-2 text-lg">
           <MdEmail className="text-xl" />
           <a
             href="mailto:gdgoncampus.vit@gmail.com"
