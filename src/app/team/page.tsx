@@ -22,7 +22,7 @@ const baseMember: TeamMember = {
   name: 'Maitri Dalvi',
   role: 'Community Lead',
   description:
-    'Passionate about growing developer communities and helping students build real-world skills.',
+    'Passionate about growing developer communities and helping students build real-world skills. Passionate about growing developer communities and helping students build real-world skills. Passionate about growing developer communities and helping students.',
   image: '/team/maitri.jpg',
   socials: {
     github: 'https://github.com/maitridalvi',
@@ -38,16 +38,16 @@ const Team = () => {
     <>
       <Navbar />
       <section className="px-4 mt-5 mb-15 flex justify-center">
-        <div className="max-w-4xl w-full space-y-9">
+        <div className="max-w-4xl w-full space-y-9 p-5">
           {team.map((member, index) => (
             <React.Fragment key={`${member.name}-${index}`}>
               <div
                 className={`flex flex-col md:flex-row ${
                   index % 2 !== 0 ? 'md:flex-row-reverse' : ''
-                } items-center bg-white rounded-xl shadow-md p-6 gap-6 min-h-64 md:min-h-72`}
+                } items-center bg-white rounded-xl shadow-md py-4 md:py-6 px-4 md:px-8 gap-6 md:gap-10 min-h-64 md:min-h-72`}
               >
                 {/* Image */}
-                <div className="w-full md:w-1/3 flex justify-center">
+                <div className="w-full md:w-1/3 px-4 md:px-6">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -56,11 +56,20 @@ const Team = () => {
                 </div>
 
                 {/* Info */}
-                <div className="w-full md:w-2/3 space-y-3 text-center md:text-left">
+                <div className="w-full md:w-2/3 px-4 md:px-6 flex flex-col gap-2 text-center md:text-left">
                   <h2 className="text-xl font-bold">{member.name}</h2>
                   <p className="text-gray-600 font-medium">{member.role}</p>
                   <p className="text-gray-700">{member.description}</p>
-                  <div className="flex justify-center md:justify-start gap-4 pt-2">
+                  <div className="flex justify-center md:justify-start gap-4 pt-3">
+                    {member.socials.linkedin && (
+                      <a
+                        href={member.socials.linkedin}
+                        target="_blank"
+                        className="text-blue-700 hover:text-blue-800"
+                      >
+                        <FaLinkedin className="w-5 h-5" />
+                      </a>
+                    )}
                     {member.socials.github && (
                       <a
                         href={member.socials.github}
@@ -68,15 +77,6 @@ const Team = () => {
                         className="text-gray-700 hover:text-black"
                       >
                         <FaGithub className="w-5 h-5" />
-                      </a>
-                    )}
-                    {member.socials.linkedin && (
-                      <a
-                        href={member.socials.linkedin}
-                        target="_blank"
-                        className="text-blue-600 hover:text-blue-800"
-                      >
-                        <FaLinkedin className="w-5 h-5" />
                       </a>
                     )}
                     {member.socials.instagram && (
