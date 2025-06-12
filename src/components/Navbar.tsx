@@ -27,9 +27,14 @@ const Navbar = () => {
       external: false,
     },
     {
-      label: 'Join Us',
+      label: 'Connect',
       href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW',
       external: true,
+    },
+    {
+      label: 'Join Us',
+      href: '/interviews',
+      external: false,
     },
   ];
 
