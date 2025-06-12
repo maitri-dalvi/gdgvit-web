@@ -38,14 +38,19 @@ const Gallery = () => {
 
   const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
     const [width, height] = size.split('x').map(Number);
+    const aspectRatio = width / height;
+    
     return (
-      <img
-        src={src}
-        alt="Gallery item"
-        width={width}
-        height={height}
-        className="w-full h-full object-cover"
-      />
+      <div 
+        className="w-full h-full relative overflow-hidden"
+        style={{ aspectRatio: aspectRatio.toString() }}
+      >
+        <img
+          src={src}
+          alt="Gallery item"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
     );
   };
 
@@ -57,7 +62,11 @@ const Gallery = () => {
 
   const GridItem: React.FC<GridItemProps> = ({ colSpan, rowSpan, imageIndex }) => (
     <motion.div
-      className={`col-span-${colSpan} row-span-${rowSpan} bg-white rounded-xl overflow-hidden shadow-sm ring-0`}
+      className={`bg-white rounded-xl overflow-hidden shadow-sm ring-0`}
+      style={{
+        gridColumn: `span ${colSpan}`,
+        gridRow: `span ${rowSpan}`,
+      }}
       whileInView={{ opacity: 1, scale: 1 }}
       initial={{ opacity: 0, scale: 0.95 }}
       whileHover={{ scale: 1.03 }}
@@ -73,7 +82,7 @@ const Gallery = () => {
   );
 
   const GalleryGrid = ({ startIndex = 0 }) => (
-    <div className="grid grid-cols-12 grid-rows-10 gap-4 h-[1000px]">
+    <div className="grid grid-cols-12 auto-rows-fr gap-4 min-h-[1000px]">
       <GridItem colSpan={6} rowSpan={4} imageIndex={startIndex + 0} />
       <GridItem colSpan={3} rowSpan={4} imageIndex={startIndex + 1} />
       <GridItem colSpan={3} rowSpan={2} imageIndex={startIndex + 2} />
@@ -91,7 +100,7 @@ const Gallery = () => {
     <>
       <Navbar />
       <div className="max-w-7xl mx-auto p-6 pt-8 pb-25">
-        <div className="space-y-4">
+        <div className="space-y-8">
           <GalleryGrid startIndex={0} />
           <GalleryGrid startIndex={10} />
         </div>
