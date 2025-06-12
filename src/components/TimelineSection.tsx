@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useCardRefsInView } from "@/app/hooks/useCardRefsInView"; 
 
 interface MonthlyData {
   month: string;
@@ -11,19 +12,12 @@ interface MonthlyData {
 }
 
 const monthlyData: MonthlyData[] = [
-  // ... same monthlyData as before
+  // ... same data
 ];
 
 const TimelineSection = () => {
   const sectionRef = useRef(null);
-
-  const cardRefs = useRef<React.RefObject<HTMLDivElement>[]>([]);
-  if (cardRefs.current.length !== monthlyData.length) {
-    // initialize refs array if not already
-    cardRefs.current = Array(monthlyData.length)
-      .fill(null)
-      .map((_, i) => cardRefs.current[i] || React.createRef<HTMLDivElement>());
-  }
+  const { refs: cardRefs, inViewArray } = useCardRefsInView<HTMLDivElement>(monthlyData.length);
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -71,18 +65,15 @@ const TimelineSection = () => {
         >
           Timeline
         </motion.h2>
-        {monthlyData.map((monthData, index) => {
-          const ref = cardRefs.current[index];
 
-          const isInView = useInView(ref, {
-            once: true,
-            amount: 0.3,
-          });
+        {monthlyData.map((monthData, index) => {
+          const isInView = inViewArray[index];
 
           return (
             <React.Fragment key={monthData.month}>
               <motion.div
-                ref={ref}
+              // @ts-expect-error gdg-ts
+                ref={(el) => { cardRefs.current[index] = el; }}
                 className="lg:border-r-2 lg:pr-8 relative lg:border-blue-dark"
                 variants={cardVariants}
                 initial="hidden"
@@ -95,7 +86,6 @@ const TimelineSection = () => {
               </motion.div>
 
               <motion.div
-                ref={ref}
                 className="lg:mx-8 mb-8 p-8 lg:p-16 rounded-xl w-full"
                 style={{ backgroundColor: monthData.bgColor }}
                 variants={cardVariants}
@@ -110,7 +100,7 @@ const TimelineSection = () => {
                   initial="hidden"
                   animate={isInView ? "visible" : "hidden"}
                 >
-                  {monthData.topics.map((topic: string, i: number) => (
+                  {monthData.topics.map((topic, i) => (
                     <motion.span
                       key={i}
                       variants={tagVariants}
