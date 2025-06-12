@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa6';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
-type TeamMember = {
+type TeamMembers = {
   name: string;
   role: string;
   description: string;
@@ -18,123 +18,132 @@ type TeamMember = {
   };
 };
 
-const team: TeamMember[] = [
-  //dummy data
+const team: TeamMembers[] = [
   {
     name: 'Maitri Dalvi',
-    role: 'Community Lead',
+    role: 'Community Organiser',
     description:
       'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
-    image: '/team/maitri.jpg',
+    image: '/team/maitri.png',
     socials: {
-      github: 'https://github.com/maitridalvi',
-      linkedin: 'https://linkedin.com/in/maitridalvi',
-      instagram: 'https://instagram.com/maitridalvi',
+      github: 'https://github.com/maitri-dalvi',
+      linkedin: 'https://linkedin.com/in/maitridalvi13',
     },
   },
   {
-    name: 'Arjun Verma',
-    role: 'Tech Evangelist',
+    name: 'Sameer Shelar',
+    role: 'Associate Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/sameer.png',
     socials: {
-      github: 'https://github.com/arjunverma',
-      linkedin: 'https://linkedin.com/in/arjunverma',
+      linkedin: 'https://linkedin.com/in/sameer-shelar-72a750267',
+      github: 'https://github.com/shelarsameer',
+
     },
   },
   {
-    name: 'Sara Khan',
-    role: 'Product Designer',
+    name: 'Shweta Behera',
+    role: 'Technical Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/shweta.png',
     socials: {
-      linkedin: 'https://linkedin.com/in/sarakhan',
-      instagram: 'https://instagram.com/sarakhan',
+      linkedin: 'https://www.linkedin.com/in/shweta-behera/',
+      github: 'https://github.com/shwet46',
     },
   },
   {
-    name: 'Ravi Singh',
-    role: 'Full Stack Developer',
+    name: 'Om Badade',
+    role: 'Technical Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/om.png',
     socials: {
-      github: 'https://github.com/ravisingh',
-      linkedin: 'https://linkedin.com/in/ravisingh',
+      linkedin: 'https://www.linkedin.com/in/ombadade234/',
+      instagram: 'https://www.instagram.com/ombadade/',
     },
   },
   {
-    name: 'Ayesha Patel',
-    role: 'AI/ML Researcher',
+    name: 'Rashmi Sahu',
+    role: 'Events & Outreach Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/rashmi.png',
     socials: {
-      github: 'https://github.com/ayeshaml',
-      linkedin: 'https://linkedin.com/in/ayeshaml',
+      linkedin: 'https://www.linkedin.com/in/rashmi-sahu-69269b257',
+      instagram: 'https://www.instagram.com/rushtricted',
     },
   },
   {
-    name: 'Karan Desai',
-    role: 'Backend Engineer',
+    name: 'Bhumi Padaya',
+    role: 'Events & Outreach Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/bhumi.png',
     socials: {
-      github: 'https://github.com/karandesai',
-      linkedin: 'https://linkedin.com/in/karandesai',
+      linkedin: 'https://www.linkedin.com/in/bhumi-padaya-706596316',
+      instagram: 'https://www.instagram.com/bhumi_padaya/',
     },
   },
   {
-    name: 'Neha Sharma',
-    role: 'Data Analyst',
+    name: 'Samarth Bhandavale',
+    role: 'Design Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/samarth.png',
     socials: {
-      linkedin: 'https://linkedin.com/in/nehasharma',
+      linkedin: 'https://www.linkedin.com/in/samarth-bhandavale/',
+      github: 'https://github.com/sambhandavale',
     },
   },
   {
-    name: 'Rohit Mehta',
-    role: 'Mobile App Developer',
+    name: 'Tanay Bhirud',
+    role: 'Design Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/tanay.png',
     socials: {
-      github: 'https://github.com/rohitmehta',
-      linkedin: 'https://linkedin.com/in/rohitmehta',
+      linkedin: 'https://www.linkedin.com/in/tanay-bhirud/',
+      instagram: 'https://www.instagram.com/tanay_bhirud1204/',
     },
   },
   {
-    name: 'Sneha Joshi',
-    role: 'Cloud Engineer',
+    name: 'Apurva Ghare',
+    role: 'Media Creation Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/apurva.png',
     socials: {
-      github: 'https://github.com/snehajoshi',
-      linkedin: 'https://linkedin.com/in/snehajoshi',
+      linkedin: 'https://linkedin.com/in/',
+      instagram: 'https://www.instagram.com/_apurvvva._/',
     },
   },
   {
-    name: 'Aman Tripathi',
-    role: 'DevOps Engineer',
+    name: 'Niranjan Jadhav',
+    role: 'Finance & Sponsorship Lead',
     description:
-'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',    image: '/team/maitri.jpg',
+      'Passionate about growing developer communities and helping students build real-world skills.helping students build real-world skills.helping students build real-world skills.',
+    image: '/team/niranjan.png',
     socials: {
-      github: 'https://github.com/amantripathi',
-      linkedin: 'https://linkedin.com/in/amantripathi',
+      linkedin: 'https://www.linkedin.com/in/niranjanjadhav1106/',
+      instagram: 'https://www.instagram.com/niranjan_1106/',
     },
   },
 ];
 
 // dummy colors
 const bgColors: string[] = [
-  '#E0F7F7', // turquoise
-  '#E0F7F7',
+  '#deffff', // turquoise
+  '#deffff',
   '#E6F0FF', // blue
   '#E6F0FF',
   '#FFE6E6', // red
   '#FFE6E6',
-  '#FFF9E6', // yellow
-  '#FFF9E6',
-  '#E6FFEA', // green
-  '#F0FFE6', // lime
+  '#fff9e6', // yellow
+  '#fff9e6',
+  '#ebffde', // green
+  '#ebffde', // green
 ];
 
 const Team = () => {
@@ -162,17 +171,17 @@ const Team = () => {
 
                 {/* Info */}
                 <div className="w-full md:w-2/3 px-4 md:px-6 flex flex-col gap-2 text-center md:text-left">
-                  <h2 className="text-xl font-bold">{member.name}</h2>
-                  <p className="text-gray-600 font-medium">{member.role}</p>
+                  <h2 className="text-xl font-black">{member.name}</h2>
+                  <p className="text-gray-600 font-semibold">{member.role}</p>
                   <p className="text-gray-700">{member.description}</p>
-                  <div className="flex justify-center md:justify-start gap-4 pt-3">
+                  <div className="flex justify-center md:justify-start gap-3 pt-3">
                     {member.socials.linkedin && (
                       <a
                         href={member.socials.linkedin}
                         target="_blank"
                         className="text-blue-700 hover:text-blue-800"
                       >
-                        <FaLinkedin className="w-5 h-5" />
+                        <Linkedin className="w-5 h-5" />
                       </a>
                     )}
                     {member.socials.github && (
@@ -181,7 +190,7 @@ const Team = () => {
                         target="_blank"
                         className="text-gray-700 hover:text-black"
                       >
-                        <FaGithub className="w-5 h-5" />
+                        <Github className="w-5 h-5" />
                       </a>
                     )}
                     {member.socials.instagram && (
@@ -190,7 +199,7 @@ const Team = () => {
                         target="_blank"
                         className="text-pink-500 hover:text-pink-700"
                       >
-                        <FaInstagram className="w-5 h-5" />
+                        <Instagram className="w-5 h-5" />
                       </a>
                     )}
                   </div>
