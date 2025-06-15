@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-// Load fonts from next/font/google
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -28,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexMono.variable} ${spaceGrotesk.variable} antialiased`}>
+    <html lang="en" className={`${ibmPlexMono.variable} ${spaceGrotesk.variable}`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>

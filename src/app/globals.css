@@ -1,9 +1,12 @@
+
+
 @import "tailwindcss";
 
 @layer base {
   :root {
     --background: 20 44% 99%; 
     --foreground: 0 0% 5%;
+
     --primary: 225 64% 52%;
     --primary-foreground: 0 0% 100%;
 
@@ -34,7 +37,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
