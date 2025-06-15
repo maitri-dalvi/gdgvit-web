@@ -1,17 +1,9 @@
 "use client";
-
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
-import { useCardRefsInView } from "@/app/hooks/useCardRefsInView"; 
+import { motion, useInView } from "framer-motion";
+import { useCardRefs } from "@/app/hooks/useCardRefs";
 
-interface MonthlyData {
-  month: string;
-  title: string;
-  topics: string[];
-  bgColor: string;
-}
-
-const monthlyData: MonthlyData[] = [
+const monthlyData = [
   {
     month: "October",
     title: "Build with AI (Gen AI Study Jams)",
@@ -54,6 +46,7 @@ const monthlyData: MonthlyData[] = [
       "Hands-on with FlutterFlow",
     ],
   },
+
   {
     month: "January",
     title: "Winter Of Code [GDG VIT x GDG IIIT Kalyani]",
@@ -125,47 +118,63 @@ const monthlyData: MonthlyData[] = [
       "Real-time Databases",
       "Pitching & Demo Day",
       "Judging Criteria Insights",
-    ]
+    ],
   },
 ];
 
 const TimelineSection = () => {
   const sectionRef = useRef(null);
-  const { refs: cardRefs, inViewArray } = useCardRefsInView<HTMLDivElement>(monthlyData.length);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
+  // 1. Create fixed-length refs
+  const cardRefs = useCardRefs<HTMLDivElement>(monthlyData.length);
 
-  const tagContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.05,
-      },
-    },
-  };
+  // 2. Call useInView separately per index — NOT in a loop
+  const inView0 = useInView(cardRefs[0], { once: true, amount: 0.3 });
+  const inView1 = useInView(cardRefs[1], { once: true, amount: 0.3 });
+  const inView2 = useInView(cardRefs[2], { once: true, amount: 0.3 });
+  const inView3 = useInView(cardRefs[3], { once: true, amount: 0.3 });
+  const inView4 = useInView(cardRefs[4], { once: true, amount: 0.3 });
+  const inView5 = useInView(cardRefs[5], { once: true, amount: 0.3 });
+  const inView6 = useInView(cardRefs[6], { once: true, amount: 0.3 });
+  const inView7 = useInView(cardRefs[7], { once: true, amount: 0.3 });
 
-  const tagVariants = {
-    hidden: { opacity: 0, scale: 0.8, y: 10 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-      },
+  const inViews = [inView0, inView1, inView2, inView3, inView4, inView5, inView6, inView7];
+
+  
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+const tagContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.05,
     },
-  };
+  },
+};
+
+const tagVariants = {
+  hidden: { opacity: 0, scale: 0.8, y: 10 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 15,
+    },
+  },
+};
+
 
   return (
     <section className="py-20 px-8 w-full" ref={sectionRef}>
@@ -177,60 +186,65 @@ const TimelineSection = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7 }}
         >
-          Timeline
+          Events Till Now...
         </motion.h2>
 
-        {monthlyData.map((monthData, index) => {
-          const isInView = inViewArray[index];
+        <div className="w-full flex justify-center">
+          <div className="lg:w-[60vw] grid lg:grid-cols-[1fr_4fr]">
+            {monthlyData.map((monthData, index) => {
+              const ref = cardRefs[index];
+              const isInView = inViews[index];
 
-          return (
-            <React.Fragment key={monthData.month}>
-              <motion.div
-              // @ts-expect-error gdg-ts
-                ref={(el) => { cardRefs.current[index] = el; }}
-                className="lg:border-r-2 lg:pr-8 relative lg:border-blue-dark"
-                variants={cardVariants}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-              >
-                <div className="text-6xl lg:text-4xl font-bold mb-4 mt-4 lg:mt-16 text-center">
-                  {monthData.month}
-                </div>
-                <div className="hidden lg:block absolute top-16 right-0 w-6 h-6 translate-x-1/2 rounded-full bg-[#F7DF1E] border-4 border-[#3658D3]" />
-              </motion.div>
+              return (
+                <React.Fragment key={monthData.month}>
+                  <motion.div
+                    ref={ref}
+                    className="lg:border-r-2 lg:pr-8 relative lg:border-blue-dark"
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                  >
+                    <div className="text-6xl lg:text-4xl font-bold mb-4 mt-4 lg:mt-16 text-center">
+                      {monthData.month}
+                    </div>
+                    <div className="hidden lg:block absolute top-16 right-0 w-6 h-6 translate-x-1/2 rounded-full bg-[#F7DF1E] border-4 border-[#3658D3]" />
+                  </motion.div>
 
-              <motion.div
-                className="lg:mx-8 mb-8 p-8 lg:p-16 rounded-xl w-full"
-                style={{ backgroundColor: monthData.bgColor }}
-                variants={cardVariants}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-              >
-                <h3 className="text-4xl font-bold mb-8">{monthData.title}</h3>
+                  <motion.div
+                    className="lg:mx-8 mb-8 p-8 lg:p-16 rounded-xl w-full"
+                    style={{ backgroundColor: monthData.bgColor }}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                  >
+                    <h3 className="text-4xl font-bold mb-8">{monthData.title}</h3>
 
-                <motion.div
-                  className="flex flex-wrap gap-2"
-                  variants={tagContainerVariants}
-                  initial="hidden"
-                  animate={isInView ? "visible" : "hidden"}
-                >
-                  {monthData.topics.map((topic, i) => (
-                    <motion.span
-                      key={i}
-                      variants={tagVariants}
-                      className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+                    <motion.div
+                      className="flex flex-wrap gap-2"
+                      variants={tagContainerVariants}
+                      initial="hidden"
+                      animate={isInView ? "visible" : "hidden"}
                     >
-                      {topic}
-                    </motion.span>
-                  ))}
-                </motion.div>
-              </motion.div>
-            </React.Fragment>
-          );
-        })}
+                      {monthData.topics.map((topic, i) => (
+                        <motion.span
+                          key={i}
+                          variants={tagVariants}
+                          className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm"
+                        >
+                          {topic}
+                        </motion.span>
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                </React.Fragment>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default TimelineSection;
+
