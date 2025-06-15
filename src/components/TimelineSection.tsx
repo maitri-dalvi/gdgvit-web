@@ -12,7 +12,121 @@ interface MonthlyData {
 }
 
 const monthlyData: MonthlyData[] = [
-  // ... same data
+  {
+    month: "October",
+    title: "Build with AI (Gen AI Study Jams)",
+    bgColor: "#FFD37D",
+    topics: [
+      "Prompt Engineering Basics",
+      "Gemini & PaLM Overview",
+      "Text Generation with LLMs",
+      "Multimodal AI Applications",
+      "Responsible AI Practices",
+      "Building AI Apps with Gemini API",
+      "Deploying GenAI Projects",
+    ],
+  },
+    {
+    month: "November",
+    title: "Tech Winter Break",
+    bgColor: "#70A2E1",
+    topics: [
+      "DSA",
+      "Intro to APIs",
+      "Frontend Project Building",
+      "Git & GitHub Essentials",
+      "Hackathon Prep",
+      "Live Coding Sessions",
+      "Community Mentoring",
+    ],
+  },
+  {
+    month: "December",
+    title: "Flutter Roadshow [GDG VIT x Flutter Mumbai]",
+    bgColor: "#77C6B3",
+    topics: [
+      "Flutter Fundamentals",
+      "State Management",
+      "Firebase Integration",
+      "Animations in Flutter",
+      "Building Responsive UIs",
+      "Dart Essentials",
+      "Hands-on with FlutterFlow",
+    ],
+  },
+  {
+    month: "January",
+    title: "Winter Of Code [GDG VIT x GDG IIIT Kalyani]",
+    bgColor: "#F57642",
+    topics: [
+      "Open Source Fundamentals",
+      "Contributing to Repos",
+      "Pull Requests & Issues",
+      "Pair Programming",
+      "Maintainer Walkthroughs",
+      "Weekly Check-ins",
+      "Project Deployment",
+      "GitHub Project Boards",
+    ],
+  },
+  {
+    month: "February",
+    title: "Solutions Challenge Info Session",
+    bgColor: "#FFBABA",
+    topics: [
+      "UN Sustainable Development Goals",
+      "How to Participate",
+      "Project Brainstorming",
+      "Tech Stack Suggestions",
+      "Team Formation",
+      "Submission Guidelines",
+      "Tips from Past Winners",
+    ],
+  },
+  {
+    month: "March",
+    title: "Shape The Web [UI/UX Figma Workshop & Competition] [GDG VIT x FOF Mumbai]",
+    bgColor: "#D9DFF8",
+    topics: [
+      "Figma Crash Course",
+      "Design Thinking Process",
+      "Color Theory & Typography",
+      "Wireframing & Prototyping",
+      "UX Case Studies",
+      "Design-to-Code Practices",
+      "Feedback & Iteration",
+      "Competition Design Brief",
+    ],
+  },
+  {
+    month: "April",
+    title: "Beyond The Browser - MERN Workshop",
+    bgColor: "#B5D3FF",
+    topics: [
+      "MongoDB Essentials",
+      "Express.js Basics",
+      "React Components",
+      "Node.js Introduction",
+      "Building APIs",
+      "MERN Stack Integration",
+      "Deployment on Render/Netlify",
+    ],
+  },
+  {
+    month: "June",
+    title: "Code the Cloud Hackathon [GDG VIT x GDG Cloud Mumbai]",
+    bgColor: "#B8F2D1",
+    topics: [
+      "Cloud Project Ideation",
+      "Using Firebase & GCP",
+      "Team Collaboration Tools",
+      "Working with APIs",
+      "Cloud Functions",
+      "Real-time Databases",
+      "Pitching & Demo Day",
+      "Judging Criteria Insights",
+    ]
+  },
 ];
 
 const TimelineSection = () => {
