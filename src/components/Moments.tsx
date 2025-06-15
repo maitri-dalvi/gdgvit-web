@@ -9,22 +9,22 @@ const events = [
   {
     id: "solutionchallenge",
     title: "Solution Challenge",
-    image: "/solutionchallenge.png",
+    image: "/moments/solutionchallenge.png",
   },
   {
     id: "flutterroadshow",
     title: "FlutterRoadshow",
-    image: "/flutterroadshow.png",
+    image: "/moments/flutterroadshow.png",
   },
   {
     id: "shapetheweb",
     title: "Shape The Web",
-    image: "/shapetheweb.png",
+    image: "/moments/shapetheweb.png",
   },
   {
     id: "beyondthebrowser",
     title: "Beyond The Browser",
-    image: "/beyondthebrowser.png",
+    image: "/moments/beyondthebrowser.png",
   },
 ];
 
