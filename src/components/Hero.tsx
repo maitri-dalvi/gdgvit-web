@@ -33,7 +33,7 @@ const Hero = () => {
 
 
   return (
-    <div className='relative min-h-screen overflow-hidden mt-18 px-4 md:px-8 lg:px-16'>
+    <div className='relative min-h-screen overflow-hidden mt-18 px-4 md:px-8 lg:px-14'>
       <div className='container mx-auto px-40 pt-8 md:pt-20 lg:pt-0 relative'>
         <motion.h1
           ref={headingRef}
@@ -80,7 +80,7 @@ const Hero = () => {
         <div className='hidden md:block absolute top-0 lg:-top-20 right-10 lg:right-56 text-blue-dark font-bold text-8xl lg:text-9xl -rotate-12'>
           <AngularBracket2 />
         </div>
-        <Typewriter text="Converting Ideas Into Reality!" className="text-center text-2xl md:text-3xl lg:text-4xl font-semibold mt-20 lg:mt-20 text-gray-800" />
+        <Typewriter text="Converting Ideas Into Reality!" className="text-center text-2xl md:text-3xl lg:text-4xl font-semibold mt-20 lg:mt-23 text-gray-800" />
       </div>
     </div>
   )
