@@ -63,7 +63,7 @@ const FeaturesSection = () => {
   })
 
   // Transform the scroll progress to horizontal movement
-  const xPosition = useTransform(scrollYProgress, [0, 1], ["0vh", "-130vh"])
+  const xPosition = useTransform(scrollYProgress, [0, 1], ["0vh", "-122vh"])
 
   return (
     <section
@@ -74,9 +74,9 @@ const FeaturesSection = () => {
       <div className='sticky top-0 h-screen flex items-center overflow-hidden'>
         {/* Title with fixed position */}
         <motion.div
-          style={{ x: xPosition }}
-          className='w-[300vh] h-screen flex justify-around items-center absolute left-0 p-16 text-white'
-        >
+  style={{ x: xPosition }}
+  className='w-[300vh] h-screen flex justify-around items-center absolute left-0 top-10 p-16 text-white'
+>
           <div className=''>
             <span className='inline-block text-orange font-bold text-9xl -rotate-[20deg]'>
               <AngularBracket />
