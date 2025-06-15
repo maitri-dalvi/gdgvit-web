@@ -211,12 +211,12 @@ const tagVariants = {
                   </motion.div>
 
                   <motion.div
-                    className="lg:mx-8 mb-8 p-8 lg:p-16 rounded-xl w-full"
+                    className="lg:mx-8 mb-8 p-8 lg:p-16 rounded-xl w-full transform transition-all duration-300 ease-in-out hover:scale-[1.025] hover:shadow-xl"
                     style={{ backgroundColor: monthData.bgColor }}
                     variants={cardVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                  >
+                  >                  
                     <h3 className="text-4xl font-bold mb-8">{monthData.title}</h3>
 
                     <motion.div
