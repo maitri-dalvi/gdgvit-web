@@ -45,7 +45,7 @@ const Footer = () => {
           <a
             href="mailto:gdgoncampus.vit@gmail.com"
             className="hover:underline hover:text-pink-300"
-          >
+          > 
             gdgoncampus.vit@gmail.com
           </a>
         </p>
