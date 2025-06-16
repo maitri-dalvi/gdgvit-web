@@ -30,15 +30,13 @@ const MobileWarningModal = ({ children }: { children?: React.ReactNode }) => {
 
   if (isMobile) {
     return (
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
         <div className="bg-white text-black rounded-xl shadow-2xl p-6 max-w-sm w-full text-center border border-primary">
-          <h2 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
+          <h2 className="text-xl font-bold mb-3 text-purple-700">
             Mobile Viewing Restricted
           </h2>
           <p className="text-sm text-zinc-700">
-            This website is not accessible on mobile devices.
-            <br />
-            Please switch to a desktop or laptop for full functionality.
+            This website is not accessible on mobile devices for now. Please switch to a desktop or laptop for full functionality.
           </p>
         </div>
       </div>
