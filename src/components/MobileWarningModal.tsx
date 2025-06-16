@@ -2,39 +2,50 @@
 
 import { useEffect, useState } from 'react';
 
-const MobileWarningModal = () => {
-  const [show, setShow] = useState(false);
+const MobileWarningModal = ({ children }: { children?: React.ReactNode }) => {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const isMobile = window.innerWidth < 768;
-      if (isMobile) {
-        setShow(true);
+    const checkMobile = () => {
+      const isMobileCheck = window.innerWidth < 768;
+      setIsMobile(isMobileCheck);
+
+      if (isMobileCheck) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
       }
-    }
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      document.body.style.overflow = 'auto';
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
-  if (!show) return null;
+  if (isMobile === null) return null;
 
-  return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
-      <div className="bg-white text-black rounded-xl shadow-2xl p-6 max-w-sm w-full text-center border border-primary">
-        <h2 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
-          Mobile Viewing Notice
-        </h2>
-        <p className="text-sm text-zinc-700">
-          This website is best viewed on a desktop or laptop.<br />
-          Some features may not appear correctly on mobile.
-        </p>
-        <button
-          onClick={() => setShow(false)}
-          className="mt-5 px-4 py-2 bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] rounded-lg hover:bg-[hsl(var(--accent-2))] transition-colors"
-        >
-          I Understand
-        </button>
+  if (isMobile) {
+    return (
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+        <div className="bg-white text-black rounded-xl shadow-2xl p-6 max-w-sm w-full text-center border border-primary">
+          <h2 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
+            Mobile Viewing Restricted
+          </h2>
+          <p className="text-sm text-zinc-700">
+            This website is not accessible on mobile devices.
+            <br />
+            Please switch to a desktop or laptop for full functionality.
+          </p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return <>{children}</>;
 };
 
 export default MobileWarningModal;
