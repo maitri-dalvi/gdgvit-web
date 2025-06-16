@@ -12,11 +12,8 @@ const MobileWarningModal = ({ children }: { children?: React.ReactNode }) => {
 
       if (isMobileCheck) {
         document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.width = '100%';
       } else {
         document.body.style.overflow = 'auto';
-        document.body.style.position = 'static';
       }
     };
 
@@ -25,7 +22,6 @@ const MobileWarningModal = ({ children }: { children?: React.ReactNode }) => {
 
     return () => {
       document.body.style.overflow = 'auto';
-      document.body.style.position = 'static';
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
@@ -34,14 +30,13 @@ const MobileWarningModal = ({ children }: { children?: React.ReactNode }) => {
 
   if (isMobile) {
     return (
-      <div className="fixed top-0 left-0 w-screen h-screen z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md px-4 overflow-hidden">
-        <div className="bg-white text-black rounded-xl shadow-2xl p-6 max-w-sm w-full text-center border border-primary">
-          <h2 className="text-xl font-bold mb-3 text-purple-700">
-            Mobile Viewing Restricted
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md px-4">
+        <div className="bg-white rounded-xl shadow-2xl p-6 max-w-md w-full text-center">
+          <h2 className="text-xl font-bold mb-3 text-[hsl(var(--primary))]">
+            🚧 Mobile Viewing Restricted 🚧
           </h2>
-          <p className="text-sm text-zinc-700">
-            This website is not accessible on mobile devices for now. Please
-            switch to a desktop or laptop for full functionality.
+          <p className="text-sm text-zinc-700 p-3">
+            This website is not accessible on mobile devices for now. Please switch to a desktop or laptop for full functionality!
           </p>
         </div>
       </div>
