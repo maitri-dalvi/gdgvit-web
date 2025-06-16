@@ -36,7 +36,7 @@ const MobileWarningModal = ({ children }: { children?: React.ReactNode }) => {
             Mobile Viewing Restricted
           </h2>
           <p className="text-sm text-zinc-700 p-3">
-            This website is not accessible on mobile devices for now. Please switch to a desktop or laptop for full functionality!🚧
+            This website is not accessible on mobile devices for now. Please switch to a desktop or laptop for full functionality!
           </p>
         </div>
       </div>
