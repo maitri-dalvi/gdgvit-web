@@ -103,7 +103,7 @@ const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto p-6 pt-8 pb-25">
+      <div className="max-w-7xl mx-auto p-6 pt-14 pb-25">
         <div className="space-y-8">
           <GalleryGrid startIndex={0} />
           <GalleryGrid startIndex={10} />
