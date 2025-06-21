@@ -11,7 +11,6 @@ import team_members_media from "@/app/content/team_members_media.json";
 import team_members_finance from "@/app/content/team_members_finance.json";
 import Footer from "@/components/Footer";
 import {
-  motion,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";

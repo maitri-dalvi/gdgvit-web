@@ -8,7 +8,7 @@ interface Props {
     i: number;
 }
 
-const Card: FC<Props> = ({ children, bg, i, borderColor }) => {
+const Card: FC<Props> = ({ children, bg, i }) => {
     // Random rotation for polaroid effect (-5 to 5 degrees)
     const rotation = (i % 11) - 5;
     

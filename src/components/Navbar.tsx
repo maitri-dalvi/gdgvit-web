@@ -10,22 +10,12 @@ import {
   FaLinkedinIn,
   FaBars,
 } from 'react-icons/fa6';
-import { FaTimes } from "react-icons/fa";
+import { FaTimes } from 'react-icons/fa';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > window.innerHeight - 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { label: 'Spectrum', href: 'https://spectrum-2025.vercel.app/', external: true },
@@ -43,14 +33,15 @@ const Navbar = () => {
     { icon: <FaGithub size={26} />, href: 'https://github.com/GDGVITM' },
     { icon: <FaXTwitter size={26} />, href: 'https://x.com/gdgvit' },
     { icon: <FaYoutube size={26} />, href: 'http://www.youtube.com/@gdscvitmumbai5838' },
-    { icon: <FaLinkedinIn size={26} />, href: 'https://www.linkedin.com/company/google-developer-groups-vit-mumbai' },
+    {
+      icon: <FaLinkedinIn size={26} />,
+      href: 'https://www.linkedin.com/company/google-developer-groups-vit-mumbai',
+    },
     { icon: <FaInstagram size={26} />, href: 'https://www.instagram.com/gdg_vit/' },
   ];
 
   return (
-    <nav
-      className="w-full top-0 sticky z-50 px-4 md:px-8 lg:px-16 bg-[#FDFAF5] shadow-md transition-all duration-300"
-    >
+    <nav className="w-full top-0 sticky z-50 px-4 md:px-8 lg:px-16 bg-[#FDFAF5] shadow-md transition-all duration-300">
       <div className="relative container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Left: Logo */}
         <Link
