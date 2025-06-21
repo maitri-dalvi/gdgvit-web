@@ -86,7 +86,7 @@ const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
   );
 
   const GalleryGrid = ({ startIndex = 0 }) => (
-    <div className="grid grid-cols-12 auto-rows-fr gap-4 min-h-[1000px]">
+    <div className="grid grid-cols-12 auto-rows-fr gap-5 min-h-[1000px]">
       <GridItem colSpan={6} rowSpan={4} imageIndex={startIndex + 0} />
       <GridItem colSpan={3} rowSpan={4} imageIndex={startIndex + 1} />
       <GridItem colSpan={3} rowSpan={2} imageIndex={startIndex + 2} />
