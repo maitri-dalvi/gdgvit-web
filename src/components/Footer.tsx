@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer className='bg-black text-white rounded-tr-[110px]'>
-      <div className='container mx-auto py-14 px-4 md:px-8 lg:px-20'>
+      <div className='container mx-auto py-10 px-4 md:px-8 lg:px-20'>
 
         {/* Social Icons Row */}
         <div className="flex justify-start items-center gap-4 mb-5 mt-5 text-pink-400 text-3xl">
