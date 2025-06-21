@@ -49,9 +49,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full top-0 sticky z-50 px-4 md:px-8 lg:px-16 transition-all duration-300 ${
-        scrolled ? 'bg-[#FDFAF5] shadow-md' : 'bg-transparent'
-      }`}
+      className="w-full top-0 sticky z-50 px-4 md:px-8 lg:px-16 bg-[#FDFAF5] shadow-md transition-all duration-300"
     >
       <div className="relative container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Left: Logo */}

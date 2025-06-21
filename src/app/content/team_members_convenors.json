@@ -1,0 +1,18 @@
+[
+	{
+		"name": "Sachin Deshpande",
+		"position": "GDG Convenor",
+		"img": "/core/sachin.png",
+        "linkedin": "https://www.linkedin.com/in/sachin-deshpande-01a5143a/",
+		"github": "",
+		"link": ""
+	},
+	{
+		"name": "Swapnil Sonawane",
+		"position": "GDG Convenor",
+		"img": "/core/swapnil.jpg",
+        "linkedin": "https://www.linkedin.com/in/swapnil-sonawane-519b59110/",
+		"github": "",
+		"link": ""
+	}
+]

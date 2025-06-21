@@ -26,8 +26,9 @@ const team: TeamMembers[] = [
     description: 'Passionate about growing developer communities and helping students build real-world skills.',
     image: '/team/maitri.png',
     socials: {
-      github: 'https://github.com/maitri-dalvi',
       linkedin: 'https://linkedin.com/in/maitridalvi13',
+      instagram: 'https://www.instagram.com/tellmesmtgidk/',
+      github: 'https://github.com/maitri-dalvi',
     },
   },
   {
@@ -37,6 +38,7 @@ const team: TeamMembers[] = [
     image: '/team/sameer.png',
     socials: {
       linkedin: 'https://linkedin.com/in/sameer-shelar-72a750267',
+      instagram: 'https://www.instagram.com/sameershelarr/',
       github: 'https://github.com/shelarsameer',
     },
   },
@@ -87,6 +89,7 @@ const team: TeamMembers[] = [
     image: '/team/samarth.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/samarth-bhandavale/',
+      instagram: 'https://www.instagram.com/sam_bhandavale/',
       github: 'https://github.com/sambhandavale',
     },
   },
@@ -102,7 +105,7 @@ const team: TeamMembers[] = [
   },
   {
     name: 'Apurva Ghare',
-    role: 'Media Creation Lead',
+    role: 'Media Lead',
     description: 'Passionate about growing developer communities and helping students build real-world skills.',
     image: '/team/apurva.png',
     socials: {
@@ -120,104 +123,188 @@ const team: TeamMembers[] = [
       instagram: 'https://www.instagram.com/niranjan_1106/',
     },
   },
+  
 ];
 
-const bgColors: string[] = [
-  '#e6ffff', '#e6ffff', '#E6F0FF', '#E6F0FF',
-  '#FFE6E6', '#FFE6E6', '#fff9e6', '#fff9e6',
-  '#ebffde', '#ebffde',
-];
+// Polaroid rotation angles for variety
+const rotations = [2, -1, 3, -2, 1, -3, 2, -1, 3, -2];
 
 export default function Team() {
   return (
     <>
       <Navbar />
-      <section className="px-4 mt-4 mb-15 flex justify-center">
-        <div className="max-w-4xl w-full space-y-9 p-5">
-          {team.map((member, index) => (
-            <motion.div
-              key={index}
-              className={`flex flex-col md:flex-row ${
-                index % 2 !== 0 ? 'md:flex-row-reverse' : ''
-              } items-center rounded-xl shadow-md py-4 md:py-6 px-4 md:px-8 gap-6 md:gap-10 min-h-64 md:min-h-72`}
-              style={{ backgroundColor: bgColors[index] }}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{
-                type: 'tween',
-                ease: [0.22, 1, 0.36, 1],
-                duration: 0.5,
-              }}
-              viewport={{ once: true }}
-            >
-              {/* Image */}
-              <div className="w-full md:w-1/3 relative aspect-square">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover rounded-xl"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-
-              {/* Info */}
-              <div className="w-full md:w-2/3 px-4 md:px-6 flex flex-col gap-2 text-center md:text-left">
-                <h2 className="text-xl font-black">{member.name}</h2>
-                <p className="text-gray-600 font-semibold">{member.role}</p>
-                <p className="text-gray-700">{member.description}</p>
-                <div className="flex justify-center md:justify-start gap-3 pt-3">
-                  {member.socials.linkedin && (
-                    <a
-                      href={member.socials.linkedin}
-                      target="_blank"
-                      className="text-blue-700 hover:text-blue-800"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                  )}
-                  {member.socials.github && (
-                    <a
-                      href={member.socials.github}
-                      target="_blank"
-                      className="text-gray-700 hover:text-black"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                  )}
-                  {member.socials.instagram && (
-                    <a
-                      href={member.socials.instagram}
-                      target="_blank"
-                      className="text-pink-500 hover:text-pink-700"
-                    >
-                      <Instagram className="w-5 h-5" />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-
-          {/* See more peeps */}
-          <motion.div
-            className="text-center pt-4"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            viewport={{ once: true }}
+      <section className="px-4 py-12 min-h-screen">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <Link
-              href="/core"
-              className="text-purple-600 hover:text-purple-800 underline font-bold text-lg"
-            >
-              See more cool peeps :)
-            </Link>
+            <h1 className="text-5xl font-bold text-gray-800 mb-4">
+              Meet The Leads
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              The amazing people behind our community ♡
+            </p>
           </motion.div>
+
+          {/* Polaroid Grid */}
+<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12 justify-items-center">
+  {team.map((member, index) => (
+    <motion.div
+      key={index}
+      className="polaroid-card"
+      style={{
+        transform: `rotate(${rotations[index]}deg)`,
+      }}
+      initial={{
+        opacity: 0,
+        y: 50,
+        rotate: rotations[index] - 10,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        rotate: rotations[index],
+      }}
+      whileHover={{
+        scale: 1.05,
+        rotate: 0,
+        zIndex: 10,
+        transition: { duration: 0.3 },
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+        delay: index * 0.1,
+      }}
+      viewport={{ once: true, margin: "-50px" }}
+    >
+      {/* Polaroid Frame */}
+      <div className="bg-white p-4 pb-10 shadow-2xl border border-gray-200 max-w-xs w-full">
+        <div className="relative aspect-square w-full mb-4 bg-gray-100">
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover"
+            sizes="300px"
+          />
         </div>
+        <div className="text-center space-y-2">
+          <h3 className="text-lg font-bold text-gray-800">
+            {member.name}
+          </h3>
+          <p className="text-sm text-gray-600 font-medium">
+            {member.role}
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed px-2">
+            {member.description}
+          </p>
+          <div className="flex justify-center gap-3 pt-3">
+            {member.socials.linkedin && (
+              <motion.a
+                href={member.socials.linkedin}
+                target="_blank"
+                className="text-blue-600"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Linkedin className="w-4 h-4" />
+              </motion.a>
+            )}
+            {member.socials.github && (
+              <motion.a
+                href={member.socials.github}
+                target="_blank"
+                className="text-gray-700"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Github className="w-4 h-4" />
+              </motion.a>
+            )}
+            {member.socials.instagram && (
+              <motion.a
+                href={member.socials.instagram}
+                target="_blank"
+                className="text-pink-500"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Instagram className="w-4 h-4" />
+              </motion.a>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-6 bg-yellow-100 opacity-80 rotate-12 shadow-sm border border-yellow-200" />
+    </motion.div>
+  ))}
+
+{/* "See more" card as part of grid*/}
+<motion.div
+  className="polaroid-card relative self-center lg:ml-76 cursor-pointer"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  viewport={{ once: true }}
+>
+  <Link href="/core" className="block w-full h-full">
+    <div className="bg-white p-8 shadow-xl border border-gray-200 transform rotate-1 w-93 h-45 flex flex-col justify-center items-center text-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-lg relative">
+      {/* Tape effect */}
+      <div className="absolute -top-2 -right-2 w-12 h-6 bg-yellow-100 opacity-80 -rotate-45 shadow-sm border border-yellow-200" />
+
+      <h2 className="text-purple-600 font-bold text-2xl">
+        📸 See more cool peeps!
+      </h2>
+      <p className="text-base text-gray-500 mt-2">
+        *Click to discover more amazing team members*
+      </p>
+    </div>
+  </Link>
+</motion.div>
+</div>
+        </div>
+
       </section>
+
+      {/* Custom CSS for polaroid effects */}
+      <style jsx>{`
+        .polaroid-card {
+          position: relative;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        
+        .polaroid-card:hover {
+          filter: brightness(1.05) contrast(1.05);
+        }
+        
+        /* Add some scattered polaroid effect */
+        .polaroid-card:nth-child(odd) {
+          margin-top: 1rem;
+        }
+        
+        .polaroid-card:nth-child(even) {
+          margin-bottom: 1rem;
+        }
+        
+        /* Subtle shadow animation */
+        .polaroid-card {
+          filter: drop-shadow(8px 8px 12px rgba(0,0,0,0.15));
+        }
+        
+        .polaroid-card:hover {
+          filter: drop-shadow(12px 12px 20px rgba(0,0,0,0.25));
+        }
+      `}</style>
+      
       <Footer />
     </>
   );
 }
+
