@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "GDG VIT",
-  description: "Community of developers at VIT",
+  description: "Community of Developers - Official Website",
 };
 
 export default function RootLayout({
