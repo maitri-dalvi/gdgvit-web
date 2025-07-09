@@ -1,7 +1,8 @@
 "use client";
 import { 
   FaXTwitter, FaGithub, FaInstagram, FaYoutube, FaMedium, 
-  FaGoogle, FaLinkedinIn, FaStar 
+  FaGoogle, FaLinkedinIn, FaStar, 
+  FaWhatsapp
 } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
@@ -9,6 +10,7 @@ const Footer = () => {
   const socialIcons = [
     { icon: <FaGoogle size={28} />, href: 'https://gdg.community.dev/gdg-on-campus-vidyalankar-institute-of-technology-mumbai-india/' },
     { icon: <FaGithub size={28} />, href: 'https://github.com/GDGVITM' },
+    { icon: <FaWhatsapp size={28} />, href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW' },
     { icon: <FaXTwitter size={28} />, href: 'https://x.com/gdgvit' },
     { icon: <FaMedium size={28} />, href: 'https://medium.com/@gdgvit' },
     { icon: <FaYoutube size={28} />, href: 'http://www.youtube.com/@gdscvitmumbai5838' },
