@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import {
-  FaXTwitter,
+  // FaXTwitter,
   FaGithub,
   FaInstagram,
-  FaYoutube,
+  // FaYoutube,
   FaGoogle,
   FaLinkedinIn,
   FaBars,
+  FaWhatsapp,
 } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 
@@ -31,12 +32,10 @@ const Navbar = () => {
       href: 'https://gdg.community.dev/gdg-on-campus-vidyalankar-institute-of-technology-mumbai-india/',
     },
     { icon: <FaGithub size={26} />, href: 'https://github.com/GDGVITM' },
-    { icon: <FaXTwitter size={26} />, href: 'https://x.com/gdgvit' },
-    { icon: <FaYoutube size={26} />, href: 'http://www.youtube.com/@gdscvitmumbai5838' },
-    {
-      icon: <FaLinkedinIn size={26} />,
-      href: 'https://www.linkedin.com/company/google-developer-groups-vit-mumbai',
-    },
+    // { icon: <FaXTwitter size={26} />, href: 'https://x.com/gdgvit' },
+    // { icon: <FaYoutube size={26} />, href: 'http://www.youtube.com/@gdscvitmumbai5838' },
+    { icon: <FaLinkedinIn size={26} />, href: 'https://www.linkedin.com/company/google-developer-groups-vit-mumbai'},
+    { icon: <FaWhatsapp size={26} />, href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW' },
     { icon: <FaInstagram size={26} />, href: 'https://www.instagram.com/gdg_vit/' },
   ];
 

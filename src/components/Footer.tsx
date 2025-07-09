@@ -10,11 +10,11 @@ const Footer = () => {
   const socialIcons = [
     { icon: <FaGoogle size={28} />, href: 'https://gdg.community.dev/gdg-on-campus-vidyalankar-institute-of-technology-mumbai-india/' },
     { icon: <FaGithub size={28} />, href: 'https://github.com/GDGVITM' },
-    { icon: <FaWhatsapp size={28} />, href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW' },
     { icon: <FaXTwitter size={28} />, href: 'https://x.com/gdgvit' },
     { icon: <FaMedium size={28} />, href: 'https://medium.com/@gdgvit' },
     { icon: <FaYoutube size={28} />, href: 'http://www.youtube.com/@gdscvitmumbai5838' },
     { icon: <FaLinkedinIn size={28} />, href: 'https://www.linkedin.com/company/google-developer-groups-vit-mumbai' },
+    { icon: <FaWhatsapp size={28} />, href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW' },
     { icon: <FaInstagram size={28} />, href: 'https://www.instagram.com/gdg_vit/' },
   ];
 
