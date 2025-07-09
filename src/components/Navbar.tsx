@@ -21,7 +21,7 @@ const Navbar = () => {
     { label: 'Spectrum', href: 'https://spectrum-2025.vercel.app/', external: true },
     { label: 'Gallery', href: '/gallery', external: false },
     { label: 'Team', href: '/team', external: false },
-    { label: 'Connect', href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW', external: true },
+    // { label: 'Connect', href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW', external: true },
     { label: 'Join Us', href: '/interviews', external: false },
   ];
 
