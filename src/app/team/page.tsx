@@ -133,7 +133,7 @@ export default function Team() {
   return (
     <>
       <Navbar />
-      <section className="px-4 py-12 min-h-screen">
+      <section className="px-4 py-12 pb-25 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div 
