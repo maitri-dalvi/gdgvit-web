@@ -23,7 +23,7 @@ const Navbar = () => {
     { label: 'Gallery', href: '/gallery', external: false },
     { label: 'Team', href: '/team', external: false },
     // { label: 'Connect', href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW', external: true },
-    { label: 'Join Us', href: '/interviews', external: false },
+    { label: 'Join Us', href: '/join-us', external: false },
   ];
 
   const socialIcons = [
