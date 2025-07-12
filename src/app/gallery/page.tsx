@@ -2,12 +2,35 @@
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+interface ImageData {
+  size: string;
+  src: string;
+}
+
+interface PlaceholderImageProps {
+  size: string;
+  src: string;
+}
+
+interface GridItemProps {
+  colSpan: number;
+  rowSpan: number;
+  imageIndex: number;
+}
+
+interface MobileImageItemProps {
+  imageIndex: number;
+}
+
+interface GridProps {
+  startIndex?: number;
+}
+
 const Gallery = () => {
-  const images = [
+  const images: ImageData[] = [
     // First gallery grid images
     { size: "600x400", src: "/gallery/1.png" },
     { size: "300x400", src: "/gallery/2.jpg" },
@@ -32,41 +55,30 @@ const Gallery = () => {
     { size: "600x250", src: "/gallery/20.jpg" },
   ];
 
-  interface PlaceholderImageProps {
-    size: string;
-    src: string;
-  }
+  const PlaceholderImage = ({ size, src }: PlaceholderImageProps) => {
+    const [width, height] = size.split('x').map(Number);
+    const aspectRatio = width / height;
 
-const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
-  const [width, height] = size.split('x').map(Number);
-  const aspectRatio = width / height;
+    return (
+      <div 
+        className="w-full h-full relative overflow-hidden"
+        style={{ aspectRatio: aspectRatio.toString() }}
+      >
+        <Image
+          src={src}
+          alt="Gallery item"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+          priority={false}
+        />
+      </div>
+    );
+  };
 
-  return (
-    <div 
-      className="w-full h-full relative overflow-hidden"
-      style={{ aspectRatio: aspectRatio.toString() }}
-    >
-      <Image
-        src={src}
-        alt="Gallery item"
-        fill
-        className="object-cover"
-        sizes="(max-width: 768px) 100vw, 33vw"
-        priority={false}
-      />
-    </div>
-  );
-};
-
-  interface GridItemProps {
-    colSpan: number;
-    rowSpan: number;
-    imageIndex: number;
-  }
-
-  const GridItem: React.FC<GridItemProps> = ({ colSpan, rowSpan, imageIndex }) => (
+  const GridItem = ({ colSpan, rowSpan, imageIndex }: GridItemProps) => (
     <motion.div
-      className={`bg-white rounded-xl overflow-hidden shadow-sm ring-0`}
+      className="bg-white rounded-xl overflow-hidden shadow-sm ring-0"
       style={{
         gridColumn: `span ${colSpan}`,
         gridRow: `span ${rowSpan}`,
@@ -85,8 +97,36 @@ const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
     </motion.div>
   );
 
-  const GalleryGrid = ({ startIndex = 0 }) => (
-    <div className="grid grid-cols-12 auto-rows-fr gap-5 min-h-[1000px]">
+  // Mobile Image Component (Square format)
+  const MobileImageItem = ({ imageIndex }: MobileImageItemProps) => (
+    <motion.div
+      className="bg-white rounded-xl overflow-hidden shadow-sm ring-0 aspect-square"
+      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileHover={{ scale: 1.03 }}
+      transition={{
+        duration: 0.4,
+        ease: 'easeOut',
+        type: 'tween',
+      }}
+      viewport={{ once: true }}
+    >
+      <div className="w-full h-full relative overflow-hidden">
+        <Image
+          src={images[imageIndex].src}
+          alt="Gallery item"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority={false}
+        />
+      </div>
+    </motion.div>
+  );
+
+  // Desktop Bento Grid Layout
+  const GalleryGrid = ({ startIndex = 0 }: GridProps) => (
+    <div className="hidden lg:grid grid-cols-12 auto-rows-fr gap-5 min-h-[1000px]">
       <GridItem colSpan={6} rowSpan={4} imageIndex={startIndex + 0} />
       <GridItem colSpan={3} rowSpan={4} imageIndex={startIndex + 1} />
       <GridItem colSpan={3} rowSpan={2} imageIndex={startIndex + 2} />
@@ -100,13 +140,69 @@ const PlaceholderImage: React.FC<PlaceholderImageProps> = ({ size, src }) => {
     </div>
   );
 
+  // Tablet Grid Layout (2 columns)
+  const TabletGrid = ({ startIndex = 0 }: GridProps) => (
+    <div className="hidden md:grid lg:hidden grid-cols-2 gap-4">
+      {Array.from({ length: 10 }, (_, i) => (
+        <motion.div
+          key={i}
+          className="bg-white rounded-xl overflow-hidden shadow-sm ring-0 aspect-square"
+          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileHover={{ scale: 1.03 }}
+          transition={{
+            duration: 0.4,
+            ease: 'easeOut',
+            type: 'tween',
+          }}
+          viewport={{ once: true }}
+        >
+          <div className="w-full h-full relative overflow-hidden">
+            <Image
+              src={images[startIndex + i].src}
+              alt="Gallery item"
+              fill
+              className="object-cover"
+              sizes="50vw"
+              priority={false}
+            />
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+
+  // Mobile Grid Layout (1 column)
+  const MobileGrid = ({ startIndex = 0 }: GridProps) => (
+    <div className="grid md:hidden grid-cols-1 gap-4">
+      {Array.from({ length: 10 }, (_, i) => (
+        <MobileImageItem key={i} imageIndex={startIndex + i} />
+      ))}
+    </div>
+  );
+
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto p-6 pt-14 pb-25">
-        <div className="space-y-8">
-          <GalleryGrid startIndex={0} />
-          <GalleryGrid startIndex={10} />
+      <div className="max-w-7xl mx-auto p-3 sm:pt-11 pb-25">
+        <div className="space-y-6 sm:space-y-8">
+          {/* First Gallery Section */}
+          <div>
+            <GalleryGrid startIndex={0} />
+            
+            <TabletGrid startIndex={0} />
+            
+            <MobileGrid startIndex={0} />
+          </div>
+
+          {/* Second Gallery Section */}
+          <div>
+            <GalleryGrid startIndex={10} />
+            
+            <TabletGrid startIndex={10} />
+            
+            <MobileGrid startIndex={10} />
+          </div>
         </div>
       </div>
       <Footer />
