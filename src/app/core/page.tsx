@@ -94,8 +94,15 @@ export default function Team() {
       <Navbar />
 
       <main className="min-h-screen flex flex-col">
+        {/* Mobile Header - Only visible on mobile */}
+        <div className="lg:hidden px-4 py-8">
+          <h1 className="font-extrabold text-black uppercase text-4xl sm:text-5xl text-center">
+            Meet The Team
+          </h1>
+        </div>
+
         <div className="flex">
-          {/* Fixed Left Panel - Desktop */}
+          {/* Fixed Left Panel - Desktop Only */}
           <div
             ref={leftPanelRef}
             className={`hidden lg:flex lg:w-1/3 xl:w-1/4 p-10 flex-col justify-center transition-opacity duration-300 fixed top-0 left-0 h-screen z-10 ${
@@ -146,8 +153,8 @@ export default function Team() {
             ref={cardsContainerRef}
             className="flex-1 lg:ml-[33.333333%] xl:ml-[25%]"
           >
-            <div className="p-6 lg:p-10">
-              <div className="grid col-span-12 mt-16 text-white xl:col-span-8 lg:col-span-8 md:col-span-9 sm:mt-0">
+            <div className="p-4 sm:p-6 lg:p-10">
+              <div className="lg:grid lg:col-span-12 lg:mt-16 lg:text-white lg:xl:col-span-8 lg:lg:col-span-8 lg:md:col-span-9 lg:sm:mt-0">
                 {[{
                   id: "Convenors",
                   data: team_members_convenors,
@@ -172,24 +179,51 @@ export default function Team() {
                   id: "Finance",
                   data: team_members_finance,
                 }].map(({ id, data }) => (
-                  <div key={id} className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-3">
-                    <div id={id} className="sm:flex flex lg:py-0 sm:py-10 py-24">
-                      <h2 className="font-extrabold text-black m-auto uppercase lg:text-3xl sm:text-2xl text-6xl">
+                  <div key={id} className="mb-16 lg:mb-0">
+                    {/* Mobile Section Header */}
+                    <div className="lg:hidden flex justify-center mb-8">
+                      <h2 className="font-extrabold text-purple-800 uppercase text-3xl sm:text-4xl text-center">
                         {id === "Events" ? "Events & Outreach" : id === "Finance" ? "Finance & Sponsorship" : id}
                       </h2>
                     </div>
-                    {data.map((mem, i) => (
-                      <TeamCardForGrid
-                        i={i}
-                        key={"mem" + i}
-                        title={mem.name}
-                        img={mem.img}
-                        subtitle={mem.position}
-                        github={mem.github}
-                        linkedin={mem.linkedin}
-                        link={mem.link}
-                      />
-                    ))}
+                    
+                    {/* Desktop Layout */}
+                    <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-3">
+                      <div id={id} className="lg:flex lg:py-0 py-24">
+                        <h2 className="font-extrabold text-purple-800 m-auto uppercase text-3xl xl:text-4xl">
+                          {id === "Events" ? "Events & Outreach" : id === "Finance" ? "Finance & Sponsorship" : id}
+                        </h2>
+                      </div>
+                      {data.map((mem, i) => (
+                        <TeamCardForGrid
+                          i={i}
+                          key={"mem" + i}
+                          title={mem.name}
+                          img={mem.img}
+                          subtitle={mem.position}
+                          github={mem.github}
+                          linkedin={mem.linkedin}
+                          link={mem.link}
+                        />
+                      ))}
+                    </div>
+                    
+                    {/* Mobile Cards Grid */}
+                    <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
+                      <div id={id} className="lg:hidden"></div>
+                      {data.map((mem, i) => (
+                        <TeamCardForGrid
+                          i={i}
+                          key={"mem" + i}
+                          title={mem.name}
+                          img={mem.img}
+                          subtitle={mem.position}
+                          github={mem.github}
+                          linkedin={mem.linkedin}
+                          link={mem.link}
+                        />
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
