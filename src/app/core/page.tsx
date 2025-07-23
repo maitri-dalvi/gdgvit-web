@@ -203,7 +203,6 @@ export default function Team() {
                           subtitle={mem.position}
                           github={mem.github}
                           linkedin={mem.linkedin}
-                          link={mem.link}
                         />
                       ))}
                     </div>
@@ -220,7 +219,6 @@ export default function Team() {
                           subtitle={mem.position}
                           github={mem.github}
                           linkedin={mem.linkedin}
-                          link={mem.link}
                         />
                       ))}
                     </div>
