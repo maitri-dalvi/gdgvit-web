@@ -19,7 +19,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Spectrum', href: 'https://spectrum-2025.vercel.app/', external: true },
+    { label: 'Spectrum', href: 'https://spectrum.gdgvitm.tech/', external: true },
     { label: 'Gallery', href: '/gallery', external: false },
     { label: 'Team', href: '/team', external: false },
     // { label: 'Connect', href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW', external: true },
