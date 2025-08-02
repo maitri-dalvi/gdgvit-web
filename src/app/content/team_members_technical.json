@@ -2,113 +2,99 @@
   {
     "name": "Abdul Raheem",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/1.jpg",
+    "linkedin": "https://www.linkedin.com/in/abdul-raheem-3a6563202/",
+    "github": "https://github.com/Abood2284"
   },
   {
     "name": "Aman Singh",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/2.jpg",
+    "linkedin": "https://www.linkedin.com/in/aman-singh21/",
+    "github": "https://github.com/SinghAman21"
   },
   {
     "name": "Bhagyesh Chaudhari",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/3.jpg",
+    "linkedin": "https://www.linkedin.com/in/bhagyesh-chaudhari-87a223268",
+    "github": "https://github.com/Bhagyesh-Chaudhari"
   },
   {
     "name": "Devdatta Talele",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/4.jpg",
+    "linkedin": "https://www.linkedin.com/in/devdatta-talele/",
+    "github": "https://github.com/devdattatalele"
   },
   {
     "name": "Deven Bagade",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/5.jpg",
+    "linkedin": "https://www.linkedin.com/in/deven-bagade-5b092b2b3",
+    "github": "https://github.com/Deven-Bagade"
   },
   {
     "name": "Gautham Nair",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
+    "img": "/core/tech/6.jpg",
     "linkedin": "",
-    "github": "",
-    "link": ""
+    "github": "https://github.com/gauthamnnair"
   },
   {
     "name": "Hammad Khan",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/7.jpg",
+    "linkedin": "https://www.linkedin.com/in/hammad-khan-782625205/",
+    "github": "https://github.com/anonymous813ke18"
   },
   {
     "name": "Neeraj Sharma",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/8.jpg",
+    "linkedin": "https://www.linkedin.com/in/neerajsharma897",
+    "github": "https://github.com/neerajsharma897"
   },
   {
     "name": "Ojasvi Doye",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/9.jpg",
+    "linkedin": "https://www.linkedin.com/in/ojasvidoye/",
+    "github": "https://github.com/ojasvi004"
   },
   {
     "name": "Om Surve",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/10.jpg",
+    "linkedin": "https://www.linkedin.com/in/om-surve-424a37256/",
+    "github": "https://github.com/omsurve31"
   },
   {
     "name": "Siddhesh Rajgure",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/11.jpg",
+    "linkedin": "https://www.linkedin.com/in/siddhesh-rajgure-7012671a9",
+    "github": "https://github.com/Rajguresiddhesh"
   },
   {
     "name": "Tanisha Gupta",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/12.jpg",
+    "linkedin": "https://www.linkedin.com/in/tanisha-gupta-a3a68b255/",
+    "github": "https://github.com/Taniishaaa"
   },
   {
     "name": "Tanishq Chavan",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/13.jpg",
+    "linkedin": "https://www.linkedin.com/in/tanishqchavan/",
+    "github": "https://github.com/TanishqChavan10"
   },
   {
     "name": "Vishant Gawali",
     "position": "Tech Team",
-    "img": "/team/tech/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/tech/14.jpg",
+    "linkedin": "https://www.linkedin.com/in/vishant-gawali-a48626352/",
+    "github": "https://github.com/vishant1811"
   }
 ]

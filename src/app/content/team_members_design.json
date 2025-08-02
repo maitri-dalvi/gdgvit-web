@@ -2,41 +2,36 @@
   {
     "name": "Omkar Thube",
     "position": "Design Team",
-    "img": "/core/design/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/design/1.jpg",
+    "linkedin": "https://www.linkedin.com/in/omkar-thube-319893256/",
+    "github": ""
   },
   {
     "name": "Shreyas Desai",
     "position": "Design Team",
-    "img": "/core/design/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/design/2.jpg",
+    "linkedin": "https://www.linkedin.com/in/shreyasdesai7",
+    "github": ""
   },
   {
     "name": "Shruti Jadhav",
     "position": "Design Team",
-    "img": "/core/design/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/design/3.jpg",
+    "linkedin": "https://www.linkedin.com/in/shruti-jadhav-a60265289",
+    "github": ""
   },
   {
     "name": "Vedant Shelar",
     "position": "Design Team",
-    "img": "/core/design/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/design/4.jpg",
+    "linkedin": "https://www.linkedin.com/in/vedant-shelar-41923724b",
+    "github": "https://github.com/vedants556"
   },
   {
     "name": "Vedika Thalkar",
     "position": "Design Team",
-    "img": "/core/design/.jpg",
-    "linkedin": "",
-    "github": "",
-    "link": ""
+    "img": "/core/design/5.jpg",
+    "linkedin": "https://www.linkedin.com/in/vedika-thalkar-6bbb852a7/",
+    "github": ""
   }
 ]
