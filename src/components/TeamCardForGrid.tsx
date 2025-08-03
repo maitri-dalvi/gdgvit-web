@@ -27,25 +27,26 @@ const TeamCardForGrid = ({
 	
 	return (
 		<motion.div
-			initial={{ y: "50%", opacity: 0, rotate: rotation + 8 }}
+			initial={{ y: 40, opacity: 0, rotate: rotation + 6 }}
 			whileInView={{ y: 0, opacity: 1, rotate: rotation }}
 			transition={{ 
-				duration: 0.5, 
-				delay: i * 0.1,
-				type: "spring",
-				stiffness: 120,
-				damping: 12
+				duration: 0.6, 
+				delay: i * 0.08,
+				ease: [0.25, 0.46, 0.45, 0.94] // Custom smooth easing
 			}}
 			viewport={{ once: true }}
 			whileHover={{ 
 				scale: 1.08, 
 				rotate: 0,
 				zIndex: 20,
-				y: -10,
-				transition: { duration: 0.3, type: "spring", stiffness: 300 }
+				y: -12,
+				transition: { 
+					duration: 0.3, 
+					ease: [0.34, 1.56, 0.64, 1] // Smooth spring-like easing
+				}
 			}}
 			style={{ rotate: rotation }}
-			className="relative bg-white flex-col p-5 pb-6 m-2 lg:m-4 rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer min-w-[260px] max-w-[280px]"
+			className="relative bg-white flex-col p-5 pb-6 m-2 lg:m-4 rounded-sm shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer min-w-[260px] max-w-[280px] will-change-transform"
 		>
 			{/* Polaroid tape effects */}
 			<div className="absolute -top-1 left-4 w-12 h-6 bg-gradient-to-br from-yellow-50 to-yellow-100 opacity-80 rotate-3 rounded-sm shadow-sm z-10"></div>
@@ -86,10 +87,11 @@ const TeamCardForGrid = ({
 							href={link} 
 							target="_blank" 
 							rel="noopener noreferrer"
-							whileHover={{ scale: 1.2, rotate: 10 }}
+							whileHover={{ scale: 1.2, rotate: 5 }}
 							whileTap={{ scale: 0.9 }}
+							transition={{ duration: 0.2, ease: "easeOut" }}
 						>
-							<FaGlobe className="text-lg text-gray-600 hover:text-blue-600 transition-colors" />
+							<FaGlobe className="text-lg text-gray-600 hover:text-blue-600 transition-colors duration-200" />
 						</motion.a>
 					)}
 					{github && (
@@ -97,10 +99,11 @@ const TeamCardForGrid = ({
 							href={github} 
 							target="_blank" 
 							rel="noopener noreferrer"
-							whileHover={{ scale: 1.2, rotate: -10 }}
+							whileHover={{ scale: 1.2, rotate: -5 }}
 							whileTap={{ scale: 0.9 }}
+							transition={{ duration: 0.2, ease: "easeOut" }}
 						>
-							<FaGithub className="text-lg text-gray-600 hover:text-gray-900 transition-colors" />
+							<FaGithub className="text-lg text-gray-600 hover:text-gray-900 transition-colors duration-200" />
 						</motion.a>
 					)}
 					{linkedin && (
@@ -108,10 +111,11 @@ const TeamCardForGrid = ({
 							href={linkedin} 
 							target="_blank" 
 							rel="noopener noreferrer"
-							whileHover={{ scale: 1.2, rotate: 10 }}
+							whileHover={{ scale: 1.2, rotate: 5 }}
 							whileTap={{ scale: 0.9 }}
+							transition={{ duration: 0.2, ease: "easeOut" }}
 						>
-							<FaLinkedin className="text-lg text-gray-600 hover:text-blue-700 transition-colors" />
+							<FaLinkedin className="text-lg text-gray-600 hover:text-blue-700 transition-colors duration-200" />
 						</motion.a>
 					)}
 				</div>
