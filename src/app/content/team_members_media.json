@@ -7,12 +7,11 @@
     "github": ""
   },
   {
-    "name": "Isha Patil",
+    "name": "Nayan Pawar",
     "position": "Media Team",
-    "img": "/core/media/2.jpg",
-    "linkedin": "https://www.linkedin.com/in/isha-patil-5052aa32a",
-    "github": ""
-
+    "img": "/core/media/4.jpg",
+    "linkedin": "https://www.linkedin.com/in/nayan-pawar03",
+    "github": "https://github.com/Nayanpawar03"
   },
   {
     "name": "Kiah Vaidya",
@@ -22,11 +21,19 @@
     "github": "https://github.com/kiahvaidya"
   },
   {
-    "name": "Nayan Pawar",
+    "name": "Sarthak Bongane",
     "position": "Media Team",
-    "img": "/core/media/4.jpg",
-    "linkedin": "https://www.linkedin.com/in/nayan-pawar03",
-    "github": "https://github.com/Nayanpawar03"
+    "img": "/core/media/7.jpg",
+    "linkedin": "https://www.linkedin.com/in/sarthak-bongane-44474a32a/",
+    "github": ""
+  },
+  {
+    "name": "Isha Patil",
+    "position": "Media Team",
+    "img": "/core/media/2.jpg",
+    "linkedin": "https://www.linkedin.com/in/isha-patil-5052aa32a",
+    "github": ""
+
   },
   {
     "name": "Purvaj Gaonkar",
@@ -41,13 +48,5 @@
     "img": "/core/media/6.jpg",
     "linkedin": "https://www.linkedin.com/in/raj-patkar-10413b2aa/",
     "github": "https://github.com/Raj-Patkar"
-
-  },
-  {
-    "name": "Sarthak Bongane",
-    "position": "Media Team",
-    "img": "/core/media/7.jpg",
-    "linkedin": "https://www.linkedin.com/in/sarthak-bongane-44474a32a/",
-    "github": ""
   }
 ]
