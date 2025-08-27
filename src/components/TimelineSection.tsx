@@ -276,7 +276,7 @@ const TimelineSection = () => {
                               d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9zm0 0c2.5-3.5 2.5-8.5 0-12m0 0C9.5 9.5 7 12 7 12s2.5 2.5 5 3zm0 0c2.5-1 5-3 5-3s-2.5-2.5-5-3z"
                             />
                           </svg>
-                          Checkout Spectrum&lsquo;s website
+                          Checkout Spectrum&rsquo;s website
                         </a>
                       </>
                     ) : (
