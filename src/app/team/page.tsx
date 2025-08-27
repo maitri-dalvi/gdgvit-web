@@ -27,7 +27,6 @@ const team: TeamMembers[] = [
     image: '/team/maitri.png',
     socials: {
       linkedin: 'https://linkedin.com/in/maitridalvi13',
-      instagram: 'https://www.instagram.com/tellmesmtgidk/',
       github: 'https://github.com/maitri-dalvi',
     },
   },

@@ -18,7 +18,7 @@ const monthlyData = [
       "Deploying GenAI Projects",
     ],
   },
-    {
+  {
     month: "November",
     title: "Tech Winter Break",
     bgColor: "#70A2E1",
@@ -46,7 +46,6 @@ const monthlyData = [
       "Hands-on with FlutterFlow",
     ],
   },
-
   {
     month: "January",
     title: "Winter Of Code [GDG VIT x GDG IIIT Kalyani]",
@@ -78,7 +77,8 @@ const monthlyData = [
   },
   {
     month: "March",
-    title: "Shape The Web [UI/UX Figma Workshop & Competition] [GDG VIT x FOF Mumbai]",
+    title:
+      "Shape The Web [UI/UX Figma Workshop & Competition] [GDG VIT x FOF Mumbai]",
     bgColor: "#D9DFF8",
     topics: [
       "Figma Crash Course",
@@ -120,15 +120,38 @@ const monthlyData = [
       "Judging Criteria Insights",
     ],
   },
+  {
+    month: "August",
+    title: "Spectrum - Flagship Event",
+    bgColor: "#dacafa",
+    topics: [
+      "DSA",
+      "CP",
+      "Vibe Coding",
+      "AI SaaS",
+      "Startup",
+      "AI/ML",
+      "Web3",
+      "GSOC",
+      "OpenSource",
+      "Hackathon",
+      "TechInnovation",
+      "Blockchain",
+      "UIUX",
+      "GenerativeAI",
+      "MobileDev",
+      "FullStack",
+      "ProductDesign",
+      "Innovation",
+    ],
+  },
 ];
 
 const TimelineSection = () => {
   const sectionRef = useRef(null);
 
-  // 1. Create fixed-length refs
   const cardRefs = useCardRefs<HTMLDivElement>(monthlyData.length);
 
-  // 2. Call useInView separately per index — NOT in a loop
   const inView0 = useInView(cardRefs[0], { once: true, amount: 0.3 });
   const inView1 = useInView(cardRefs[1], { once: true, amount: 0.3 });
   const inView2 = useInView(cardRefs[2], { once: true, amount: 0.3 });
@@ -137,44 +160,53 @@ const TimelineSection = () => {
   const inView5 = useInView(cardRefs[5], { once: true, amount: 0.3 });
   const inView6 = useInView(cardRefs[6], { once: true, amount: 0.3 });
   const inView7 = useInView(cardRefs[7], { once: true, amount: 0.3 });
+  const inView8 = useInView(cardRefs[8], { once: true, amount: 0.3 });
 
-  const inViews = [inView0, inView1, inView2, inView3, inView4, inView5, inView6, inView7];
+  const inViews = [
+    inView0,
+    inView1,
+    inView2,
+    inView3,
+    inView4,
+    inView5,
+    inView6,
+    inView7,
+    inView8,
+  ];
 
-  
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
-const tagContainerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.05,
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
     },
-  },
-};
+  };
 
-const tagVariants = {
-  hidden: { opacity: 0, scale: 0.8, y: 10 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      damping: 15,
+  const tagContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.05,
+      },
     },
-  },
-};
+  };
 
+  const tagVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 10 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 15,
+      },
+    },
+  };
 
   return (
     <section className="py-20 px-8 w-full" ref={sectionRef}>
@@ -216,8 +248,42 @@ const tagVariants = {
                     variants={cardVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                  >                  
-                    <h3 className="text-4xl font-bold mb-8">{monthData.title}</h3>
+                  >
+                   
+                    {monthData.month === "August" ? (
+                      <>
+                        <h3 className="text-4xl font-bold mb-4">
+                          {monthData.title}
+                        </h3>
+                        <a
+                          href="https://spectrum.gdgvitm.tech/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-blue-900 hover:text-blue-700 font-medium mb-6"
+                        >
+                          {/* Globe icon */}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-5 h-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9zm0 0c2.5-3.5 2.5-8.5 0-12m0 0C9.5 9.5 7 12 7 12s2.5 2.5 5 3zm0 0c2.5-1 5-3 5-3s-2.5-2.5-5-3z"
+                            />
+                          </svg>
+                          Checkout Spectrum's website
+                        </a>
+                      </>
+                    ) : (
+                      <h3 className="text-4xl font-bold mb-8">
+                        {monthData.title}
+                      </h3>
+                    )}
 
                     <motion.div
                       className="flex flex-wrap gap-2"
@@ -247,4 +313,3 @@ const tagVariants = {
 };
 
 export default TimelineSection;
-
