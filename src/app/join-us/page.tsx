@@ -5,14 +5,29 @@ const Interviews = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800">
-            GDG VIT&apos;s Interviews 2025-26 <br />Coming Soon...
-        </h1>
-        {/* <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-500 max-w-md">
-          For the new tenure 2025-26
-        </p> */}
-      </div>
+
+      <main className="px-4">
+        <section className="mx-auto w-full max-w-screen-xl py-12 lg:py-16 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800">
+            Apply to Join Us!
+          </h1>
+
+          {/* Scrollable Google Form */}
+          <div className="mt-10 mx-auto w-full max-w-5xl h-[800px] rounded-2xl shadow-2xl overflow-hidden">
+            <iframe
+              src="https://forms.gle/pA4tx8ZKABSEh9dJ7"
+              className="w-full h-full overflow-y-scroll"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              loading="lazy"
+            >
+              Loading…
+            </iframe>
+          </div>
+        </section>
+      </main>
+
       <Footer />
     </>
   );
