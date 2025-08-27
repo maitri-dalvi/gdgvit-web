@@ -12,7 +12,6 @@ const Footer = () => {
     { icon: <FaGithub size={28} />, href: 'https://github.com/GDGVITM' },
     { icon: <FaXTwitter size={28} />, href: 'https://x.com/gdgvit' },
     { icon: <FaMedium size={28} />, href: 'https://medium.com/@gdgvit' },
-    { icon: <FaYoutube size={28} />, href: 'http://www.youtube.com/@gdscvitmumbai5838' },
     { icon: <FaLinkedinIn size={28} />, href: 'https://www.linkedin.com/company/google-developer-groups-vit-mumbai' },
     { icon: <FaWhatsapp size={28} />, href: 'https://chat.whatsapp.com/GTP2ydK7MyXFBRwf8vnrNW' },
     { icon: <FaInstagram size={28} />, href: 'https://www.instagram.com/gdg_vit/' },
@@ -54,9 +53,8 @@ const Footer = () => {
 
         {/* Location Info */}
         <p className="text-lg text-zinc-300 mb-2">
-          GDG VIT operates from Vidyalankar Institute of Technology,
-          <br />
-          Wadala, Mumbai, Maharashtra, India.
+          GDG-VIT operates from Vidyalankar Institute of Technology, Mumbai, India.
+          
         </p>
 
         {/* Star Us on GitHub */}
@@ -64,13 +62,14 @@ const Footer = () => {
           href="https://github.com/GDGVITM"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-pink-400 text-lg mb-3 hover:underline hover:text-pink-300"
+          className="flex items-center gap-2 text-pink-400 text-lg mb-2 hover:underline hover:text-pink-300"
         >
           <FaStar className="text-pink-400" />
           Star us on GitHub
         </a>
 
         {/* Terminal Style Tagline */}
+        <p className="text-lg text-zinc-400 font-mono">Made with <span className="text-2xl">𖹭</span> by Mai3</p>
         <p className="text-lg text-zinc-400 italic font-mono">sudo rm -rf negativity/</p>
       </div>
     </footer>
