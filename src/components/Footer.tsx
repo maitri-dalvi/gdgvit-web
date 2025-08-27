@@ -1,6 +1,6 @@
 "use client";
 import { 
-  FaXTwitter, FaGithub, FaInstagram, FaYoutube, FaMedium, 
+  FaXTwitter, FaGithub, FaInstagram, FaMedium, 
   FaGoogle, FaLinkedinIn, FaStar, 
   FaWhatsapp
 } from "react-icons/fa6";
