@@ -112,12 +112,12 @@ const FeaturesSection = () => {
               </h2>
             </div>
             {/* Feature Cards */}
-<motion.div
+            <motion.div
   ref={card1Ref}
   variants={cardVariants}
   initial="hidden"
   animate={isCard1InView ? "visible" : "hidden"}
-  className="h-[75vh] w-[60vh] xl:p-14 sm:p-10 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+  className="h-[75vh] 2xl:h-[65vh] w-[60vh] xl:p-14 sm:p-10 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
 >
   <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-medium break-words">
     We believe in thinking beyond the conventional. A club&apos;s resources
@@ -136,7 +136,7 @@ const FeaturesSection = () => {
   variants={cardVariants}
   initial="hidden"
   animate={isCard2InView ? "visible" : "hidden"}
-  className="h-[75vh] w-[60vh] p-6 sm:p-9 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+  className="h-[75vh] 2xl:h-[65vh] w-[60vh] p-6 sm:p-9 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
 >
   <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
     Our Story
@@ -156,7 +156,7 @@ const FeaturesSection = () => {
   variants={cardVariants}
   initial="hidden"
   animate={isCard3InView ? "visible" : "hidden"}
-  className="h-[75vh] w-[60vh] p-6 sm:p-10 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+  className="h-[75vh] 2xl:h-[65vh] w-[60vh] p-6 sm:p-10 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
 >
   <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
     Join Us
