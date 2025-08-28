@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Left: Logo */}
         <Link
           href="/"
-          className="flex-shrink-0 text-purple-800 font-extrabold text-3xl tracking-tight"
+          className="flex-shrink-0 text-purple-800 font-extrabold text-xl sm:text-3xl tracking-tight"
         >
           gdg_vit
         </Link>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-purple-700 text-md font-medium"
+                className="block text-purple-700 text-sm font-medium"
               >
                 {label}
               </a>
@@ -116,7 +116,7 @@ const Navbar = () => {
               <Link
                 key={label}
                 href={href}
-                className="block text-purple-700 text-md font-medium"
+                className="block text-purple-700 text-sm font-medium"
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
@@ -125,7 +125,7 @@ const Navbar = () => {
           )}
 
           {/* Social Icons for Mobile */}
-          <div className="flex items-center gap-4 pt-2">
+          <div className="flex items-center gap-3 pt-2">
             {socialIcons.map(({ icon, href }, index) => (
               <a
                 key={index}
@@ -134,7 +134,9 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="text-purple-800 hover:text-purple-500 transition-colors"
               >
-                {icon}
+                <div className="scale-75">
+                  {icon}
+                </div>
               </a>
             ))}
           </div>

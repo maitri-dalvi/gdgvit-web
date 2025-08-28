@@ -8,7 +8,7 @@ import Image from "next/image";
 const events = [
   {
     id: "solutionchallenge",
-    title: "Solution Challenge",
+    title: "Solutions Challenge",
     image: "/moments/solutionchallenge.png",
   },
   {

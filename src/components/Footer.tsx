@@ -23,7 +23,7 @@ const Footer = () => {
       <div className='container mx-auto py-10 px-4 md:px-8 lg:px-20'>
 
         {/* Social Icons Row */}
-        <div className="flex justify-start items-center gap-4 mb-5 mt-5 text-pink-400 text-3xl">
+        <div className="flex justify-start items-center gap-3 sm:gap-4 mb-5 mt-5 text-pink-400 text-xl sm:text-3xl">
           {socialIcons.map(({ icon, href }, index) => (
             <a
               key={index}
@@ -32,18 +32,20 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-pink-300 transition-colors duration-300"
             >
-              {icon}
+              <div className="scale-75 sm:scale-100">
+                {icon}
+              </div>
             </a>
           ))}
         </div>
 
         {/* Copyright and Contact */}
-        <p className="text-lg text-zinc-300 mb-2">
+        <p className="text-sm sm:text-lg text-zinc-300 mb-2">
           Copyright © {new Date().getFullYear()} GDG VIT. Open Source.
         </p>
 
-        <p className="flex items-center gap-2 text-pink-400 mb-2 text-lg">
-          <MdEmail className="text-xl" />
+        <p className="flex items-center gap-2 text-pink-400 mb-2 text-sm sm:text-lg">
+          <MdEmail className="text-base sm:text-xl" />
           <a
             href="mailto:gdgoncampus.vit@gmail.com"
             className="hover:underline hover:text-pink-300"
@@ -53,7 +55,7 @@ const Footer = () => {
         </p>
 
         {/* Location Info */}
-        <p className="text-lg text-zinc-300 mb-2">
+        <p className="text-sm sm:text-lg text-zinc-300 mb-2">
           GDG-VIT operates from Vidyalankar Institute of Technology, Mumbai, India.
           
         </p>
@@ -63,15 +65,15 @@ const Footer = () => {
           href="http://terminal.gdgvitm.tech"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-pink-400 text-lg mb-2 hover:underline hover:text-pink-300"
+          className="flex items-center gap-2 text-pink-400 text-sm sm:text-lg mb-2 hover:underline hover:text-pink-300"
         >
           <FaLink className="text-pink-400" />
           Did you see our Terminal?
         </a>
 
         {/* Terminal Style Tagline */}
-        <p className="text-lg text-zinc-400 font-mono">Made with <i className="fa-regular fa-heart text-sm"></i> by Mai3</p>
-        <p className="text-lg text-zinc-400 italic font-mono">sudo rm -rf negativity/</p>
+        <p className="text-sm sm:text-lg text-zinc-400 font-mono">Made with <i className="fa-regular fa-heart text-xs sm:text-sm"></i> by Mai3</p>
+        <p className="text-sm sm:text-lg text-zinc-400 italic font-mono">sudo rm -rf negativity/</p>
       </div>
     </footer>
   );
