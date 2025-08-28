@@ -1,4 +1,5 @@
 "use client";
+import { FaLink } from "react-icons/fa";
 import { 
   FaXTwitter, FaGithub, FaInstagram, FaMedium, 
   FaGoogle, FaLinkedinIn, FaStar, 
@@ -38,7 +39,7 @@ const Footer = () => {
 
         {/* Copyright and Contact */}
         <p className="text-lg text-zinc-300 mb-2">
-          Copyright © 2025 GDG VIT. Open Source.
+          Copyright © {new Date().getFullYear()} GDG VIT. Open Source.
         </p>
 
         <p className="flex items-center gap-2 text-pink-400 mb-2 text-lg">
@@ -59,13 +60,13 @@ const Footer = () => {
 
         {/* Star Us on GitHub */}
         <a
-          href="https://github.com/GDGVITM"
+          href="http://terminal.gdgvitm.tech"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-pink-400 text-lg mb-2 hover:underline hover:text-pink-300"
         >
-          <FaStar className="text-pink-400" />
-          Star us on GitHub
+          <FaLink className="text-pink-400" />
+          Did you see our Terminal?
         </a>
 
         {/* Terminal Style Tagline */}

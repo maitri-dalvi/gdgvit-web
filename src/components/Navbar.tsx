@@ -100,7 +100,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pt-2 pb-4 bg-[#FDFAF5] shadow-md space-y-3">
+        <div className="md:hidden absolute top-full left-0 right-0 px-4 pt-2 pb-4 bg-[#FDFAF5] shadow-md space-y-3 z-40">
           {navItems.map(({ label, href, external }) =>
             external ? (
               <a
