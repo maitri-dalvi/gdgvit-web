@@ -23,7 +23,7 @@ const team: TeamMembers[] = [
   {
     name: 'Maitri Dalvi',
     role: 'Community Organiser',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Driving impactful initiatives and fostering collaboration within developer communities.',
     image: '/team/maitri.png',
     socials: {
       linkedin: 'https://linkedin.com/in/maitridalvi13',
@@ -33,7 +33,7 @@ const team: TeamMembers[] = [
   {
     name: 'Sameer Shelar',
     role: 'Associate Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Passionate about exploring ideas and contributing to impactful community initiatives.',
     image: '/team/sameer.png',
     socials: {
       linkedin: 'https://linkedin.com/in/sameer-shelar-72a750267',
@@ -44,7 +44,7 @@ const team: TeamMembers[] = [
   {
     name: 'Shweta Behera',
     role: 'Technical Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Building innovative solutions and mentoring developers to grow their skills in tech.',
     image: '/team/shweta.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/shweta-behera/',
@@ -54,7 +54,7 @@ const team: TeamMembers[] = [
   {
     name: 'Om Badade',
     role: 'Technical Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Passionate about exploring new technologies and driving impactful technical initiatives.',
     image: '/team/om.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/ombadade234/',
@@ -64,7 +64,7 @@ const team: TeamMembers[] = [
   {
     name: 'Rashmi Sahu',
     role: 'Events & Outreach Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Focused on building strong networks, representing GDG through public speaking.',
     image: '/team/rashmi.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/rashmi-sahu-69269b257',
@@ -74,7 +74,7 @@ const team: TeamMembers[] = [
   {
     name: 'Bhumi Padaya',
     role: 'Events & Outreach Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Crafting engaging experiences that empower developers through impactful events.',
     image: '/team/bhumi.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/bhumi-padaya-706596316',
@@ -84,7 +84,7 @@ const team: TeamMembers[] = [
   {
     name: 'Samarth Bhandavale',
     role: 'Design Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Crafting intuitive designs that enhance experiences and inspire creativity, a.k.a. Figma Wizard',
     image: '/team/samarth.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/samarth-bhandavale/',
@@ -95,7 +95,7 @@ const team: TeamMembers[] = [
   {
     name: 'Tanay Bhirud',
     role: 'Design Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Bringing ideas to life through creative visuals that inspire and engage audiences.',
     image: '/team/tanay.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/tanay-bhirud/',
@@ -105,7 +105,7 @@ const team: TeamMembers[] = [
   {
     name: 'Apurva Ghare',
     role: 'Media Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Showcasing the GDG story through creative, engaging media and impactful content.',
     image: '/team/apurva.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/apurva-ghare-7bb94029a',
@@ -115,7 +115,7 @@ const team: TeamMembers[] = [
   {
     name: 'Niranjan Jadhav',
     role: 'Finance & Sponsorship Lead',
-    description: 'Passionate about growing developer communities and helping students build real-world skills.',
+    description: 'Dedicated to managing resources effectively to support impactful community initiatives.',
     image: '/team/niranjan.png',
     socials: {
       linkedin: 'https://www.linkedin.com/in/niranjanjadhav1106/',

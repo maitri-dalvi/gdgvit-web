@@ -22,6 +22,16 @@ const Hero = () => {
     },
   };
 
+  const decorativeVariants = {
+    hidden: { opacity: 0, scale: 0.8, rotate: -10 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
   
     <div className='relative flex min-h-[95vh] md:min-h-screen items-center justify-center overflow-hidden px-6 py-12 md:px-8 md:py-16 lg:px-14'>
@@ -71,52 +81,111 @@ const Hero = () => {
         {/* --- Decorative SVGs with Responsive Positioning --- */}
 
         {/* Angular Brackets */}
-        <div className='absolute top-[50%] -left-4 -rotate-12 text-blue-light sm:top-[60%] sm:-left-8 md:top-1/2 md:left-4 lg:left-8'>
+        <motion.div 
+          className='absolute top-[50%] -left-4 -rotate-12 text-blue-light sm:top-[60%] sm:-left-8 md:top-1/2 md:left-4 lg:left-8'
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 0.4 }}
+        >
           <AngularBracket1 className='h-auto w-24 text-6xl sm:w-20 md:w-32 lg:w-40' />
-        </div>
+        </motion.div>
 
-        <div className='absolute -top-16 -right-4 -rotate-8 text-blue-dark sm:-top-8 sm:-right-6 md:top-0 md:right-4 lg:-top-16 lg:right-8 xl:-top-20 xl:-right-2'>
+        <motion.div 
+          className='absolute -top-16 -right-4 -rotate-8 text-blue-dark sm:-top-8 sm:-right-6 md:top-0 md:right-4 lg:-top-16 lg:right-8 xl:-top-20 xl:-right-2'
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 0.6 }}
+        >
           <AngularBracket2 className='h-auto w-24 text-6xl sm:w-20 md:w-32 lg:w-40' />
-        </div>
+        </motion.div>
 
         {/* Creative Tech-Themed Elements for GDG - Clean & Simple */}
         
         {/* Code Brackets - Properly positioned away from all text */}
-        <div className='absolute top-[5%] left-[5%] animate-pulse-slow text-yellow-500 text-3xl sm:text-4xl md:text-5xl font-mono opacity-100'>
+        <motion.div 
+          className='absolute top-[5%] left-[5%] animate-pulse-slow text-yellow-500 text-3xl sm:text-4xl md:text-5xl font-mono opacity-100'
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 0.8 }}
+        >
           {'{ }'}
-        </div>
+        </motion.div>
         
-        <div className='absolute top-[25%] right-[5%] animate-float-slow text-purple-600 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' style={{animationDelay: '0.8s'}}>
+        <motion.div 
+          className='absolute top-[25%] right-[5%] animate-float-slow text-purple-400 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' 
+          style={{animationDelay: '0.8s'}}
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 1.0 }}
+        >
           {'</>'}
-        </div>
+        </motion.div>
 
         {/* Bottom safe area - Below typewriter text */}
-        <div className='absolute bottom-[2%] left-[10%] animate-fade text-purple-600 text-base sm:text-lg md:text-xl font-mono opacity-100 leading-tight hidden sm:block' style={{animationDelay: '0.3s'}}>
+        <motion.div 
+          className='absolute bottom-[2%] left-[10%] animate-fade text-purple-600 text-base sm:text-lg md:text-xl font-mono opacity-100 leading-tight hidden sm:block' 
+          style={{animationDelay: '0.3s'}}
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 1.2 }}
+        >
           {'01001'}
           <br />
           {'11010'}
-        </div>
+        </motion.div>
 
-        <div className='absolute bottom-[2%] right-[10%] animate-fade text-yellow-500 text-base sm:text-lg md:text-xl font-mono opacity-100 leading-tight hidden sm:block' style={{animationDelay: '2.2s'}}>
+        <motion.div 
+          className='absolute bottom-[2%] right-[10%] animate-fade text-yellow-500 text-base sm:text-lg md:text-xl font-mono opacity-100 leading-tight hidden sm:block' 
+          style={{animationDelay: '2.2s'}}
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 1.4 }}
+        >
           {'1010'}
           <br />
           {'0110'}
-        </div>
+        </motion.div>
 
         {/* Side symbols - Far edges */}
-        <div className='absolute top-[45%] left-[1%] animate-float-slow text-green-600 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' style={{animationDelay: '1.2s'}}>
+        <motion.div 
+          className='absolute top-[45%] left-[1%] animate-float-slow text-green-400 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' 
+          style={{animationDelay: '1.2s'}}
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 1.6 }}
+        >
           {'()'}
-        </div>
+        </motion.div>
 
-        <div className='absolute top-[45%] right-[1%] animate-pulse-slow text-blue-600 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' style={{animationDelay: '0.6s'}}>
+        <motion.div 
+          className='absolute top-[45%] right-[1%] animate-pulse-slow text-blue-600 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' 
+          style={{animationDelay: '0.6s'}}
+          variants={decorativeVariants}
+          initial='hidden'
+          animate={isHeadingInView ? "visible" : "hidden"}
+          transition={{ delay: 1.8 }}
+        >
           {'@'}
-        </div>
+        </motion.div>
 
-        <Typewriter
-          text='Converting Ideas Into Reality!'
-          // Responsive font size and margin-top for the typewriter text
-          className='mt-12 text-center text-xl font-semibold text-gray-800 sm:mt-16 sm:text-2xl md:mt-20 md:text-3xl lg:text-4xl'
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 2.0, duration: 0.8, ease: "easeOut" }}
+        >
+          <Typewriter
+            text='Converting Ideas Into Reality!'
+            // Responsive font size and margin-top for the typewriter text
+            className='mt-12 text-center text-xl font-semibold text-gray-800 sm:mt-16 sm:text-2xl md:mt-20 md:text-3xl lg:text-4xl'
+          />
+        </motion.div>
       </div>
     </div>
   );

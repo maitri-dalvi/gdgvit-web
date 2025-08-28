@@ -20,9 +20,9 @@ const Interviews = () => {
 
           {/* Google Form Container */}
           <div className="w-full max-w-5xl mx-auto mb-10 sm:mb-12 lg:mb-10">
-            <div className="relative bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+            <div className="relative bg-blue-50 rounded-lg shadow-lg overflow-hidden border border-gray-200">
               {/* Loading fallback */}
-              <div className="absolute inset-0 flex items-center justify-center bg-blue-50 z-0">
+              <div className="absolute top-0 left-0 right-0 flex items-center justify-center z-10 py-8">
                 <div className="text-center">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
                   <p className="text-gray-500 text-sm">Loading application form...</p>
@@ -32,26 +32,12 @@ const Interviews = () => {
               {/* Google Form Iframe */}
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdANzIj-mZ1yGjeqGyekKvWCowrscWIqaY3EsQpmyDaZoSFOg/viewform?embedded=true"
-                className="relative z-10 w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[900px] xl:h-[1000px] border-0"
+                className="relative z-20 w-full h-[600px] sm:h-[700px] md:h-[800px] lg:h-[900px] xl:h-[1000px] border-0"
                 loading="lazy"
                 title="Application Form"
                 allowFullScreen
-              >
-                <p className="text-center text-gray-500 p-8">
-                  Your browser does not support iframes. 
-                  <a 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdANzIj-mZ1yGjeqGyekKvWCowrscWIqaY3EsQpmyDaZoSFOg/viewform" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline ml-1"
-                  >
-                    Please click here to access the form directly.
-                  </a>
-                </p>
-              </iframe>
+              />
             </div>
-            
-            
           </div>
         </section>
       </main>
