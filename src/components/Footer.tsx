@@ -69,7 +69,7 @@ const Footer = () => {
         </a>
 
         {/* Terminal Style Tagline */}
-        <p className="text-lg text-zinc-400 font-mono">Made with <span className="text-2xl">𖹭</span> by Mai3</p>
+        <p className="text-lg text-zinc-400 font-mono">Made with <span>&lt;3</span> by Mai3</p>
         <p className="text-lg text-zinc-400 italic font-mono">sudo rm -rf negativity/</p>
       </div>
     </footer>
