@@ -132,7 +132,7 @@ export default function Team() {
   return (
     <>
       <Navbar />
-      <section className="px-4 py-12 pb-25 min-h-screen">
+      <section className="px-4 py-12 pb-25 min-h-screen overflow-x-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div 
@@ -141,16 +141,16 @@ export default function Team() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl font-bold text-gray-800 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Meet The Leads
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
               The amazing people behind our community <i className="fa-regular fa-heart text-sm"></i>
             </p>
           </motion.div>
 
           {/* Polaroid Grid */}
-<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12 justify-items-center">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-12 justify-items-center max-w-full">
   {team.map((member, index) => (
     <motion.div
       key={index}
@@ -183,7 +183,7 @@ export default function Team() {
       viewport={{ once: true, margin: "-50px" }}
     >
       {/* Polaroid Frame */}
-      <div className="bg-white p-4 pb-10 shadow-2xl border border-gray-200 max-w-xs w-full">
+      <div className="bg-white p-3 sm:p-4 pb-8 sm:pb-10 shadow-2xl border border-gray-200 w-full max-w-[280px] sm:max-w-xs">
         <div className="relative aspect-square w-full mb-4 bg-gray-100">
           <Image
             src={member.image}
@@ -194,13 +194,13 @@ export default function Team() {
           />
         </div>
         <div className="text-center space-y-2">
-          <h3 className="text-lg font-bold text-gray-800">
+          <h3 className="text-base sm:text-lg font-bold text-gray-800">
             {member.name}
           </h3>
-          <p className="text-sm text-gray-600 font-medium">
+          <p className="text-xs sm:text-sm text-gray-600 font-medium">
             {member.role}
           </p>
-          <p className="text-xs text-gray-500 leading-relaxed px-2">
+          <p className="text-xs text-gray-500 leading-relaxed px-1 sm:px-2">
             {member.description}
           </p>
           <div className="flex justify-center gap-3 pt-3">
@@ -246,21 +246,21 @@ export default function Team() {
 
 {/* "See more" card as part of grid - Mobile responsive */}
 <motion.div
-  className="polaroid-card relative self-center lg:ml-76 cursor-pointer w-full max-w-xs"
+  className="polaroid-card relative self-center cursor-pointer w-full max-w-[280px] sm:max-w-xs lg:ml-76"
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 0.3 }}
   viewport={{ once: true }}
 >
   <Link href="/core" className="block w-full h-full">
-    <div className="bg-white p-6 md:p-8 shadow-xl border border-gray-200 transform rotate-1 w-full h-auto min-h-[180px] md:w-93 md:h-45 flex flex-col justify-center items-center text-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-lg relative">
+    <div className="bg-white p-4 sm:p-6 md:p-8 shadow-xl border border-gray-200 transform rotate-1 w-full h-auto min-h-[160px] sm:min-h-[180px] md:w-93 md:h-45 flex flex-col justify-center items-center text-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-lg relative">
       {/* Tape effect */}
-      <div className="absolute -top-2 -right-2 w-12 h-6 bg-yellow-100 opacity-80 -rotate-45 shadow-sm border border-yellow-200" />
+      <div className="absolute -top-2 -right-2 w-10 sm:w-12 h-5 sm:h-6 bg-yellow-100 opacity-80 -rotate-45 shadow-sm border border-yellow-200" />
 
-      <h2 className="text-purple-600 font-bold text-xl md:text-2xl">
+      <h2 className="text-purple-600 font-bold text-lg sm:text-xl md:text-2xl">
         📸 See more cool peeps!
       </h2>
-      <p className="text-sm md:text-base text-gray-500 mt-2 px-2">
+      <p className="text-xs sm:text-sm md:text-base text-gray-500 mt-2 px-2">
         *Click to discover more amazing team members*
       </p>
     </div>
