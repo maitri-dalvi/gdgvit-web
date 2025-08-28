@@ -112,87 +112,105 @@ const FeaturesSection = () => {
               </h2>
             </div>
             {/* Feature Cards */}
-            <motion.div
-              ref={card1Ref}
-              variants={cardVariants}
-              initial="hidden"
-              animate={isCard1InView ? "visible" : "hidden"}
-              className='h-[70vh] w-[60vh] p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3'
-            >
-              <p className='text-gray-300 text-xl font-medium'>
-                We believe in thinking beyond the conventional. A club&apos;s resources shouldn&apos;t just be directed toward organizing events, but also towards fostering a culture of continuous learning and collaborative growth. With that in mind, we host flagship events like <span className="text-blue-400">Hackbuild, Capture the Flag (CTF), and Competitive Programming under Spectrum</span>, along with a wide range of insightful workshops.
-              </p>
-            </motion.div>
+<motion.div
+  ref={card1Ref}
+  variants={cardVariants}
+  initial="hidden"
+  animate={isCard1InView ? "visible" : "hidden"}
+  className="h-[70vh] w-[60vh] p-6 sm:p-10 md:p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+>
+  <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-medium break-words">
+    We believe in thinking beyond the conventional. A club&apos;s resources
+    shouldn&apos;t just be directed toward organizing events, but also towards
+    fostering a culture of continuous learning and collaborative growth. With
+    that in mind, we host flagship events like{" "}
+    <span className="text-blue-400">
+      Hackbuild, Capture the Flag (CTF), and Competitive Programming under
+      Spectrum
+    </span>
+    , along with a wide range of insightful workshops.
+  </p>
+</motion.div>
 
-            <motion.div
-              ref={card2Ref}
-              variants={cardVariants}
-              initial="hidden"
-              animate={isCard2InView ? "visible" : "hidden"}
-              className='h-[70vh] w-[60vh] p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3'
-            >
-              <h3 className='text-4xl font-bold mb-4'>Our Story</h3>
-              <p className='text-gray-300 text-xl font-medium'>
-                Started in 2021 as Google Developer Student Clubs (GDSC), the club transitioned to GDG on Campus in 2024. It&apos;s been an incredible 5-year journey of innovation, collaboration, and growth — a community proudly powered by <span className="text-green-400">GoogleForDevs</span>. Over the years, we&apos;ve empowered countless students to build & learn.
-              </p>
-            </motion.div>
+<motion.div
+  ref={card2Ref}
+  variants={cardVariants}
+  initial="hidden"
+  animate={isCard2InView ? "visible" : "hidden"}
+  className="h-[70vh] w-[60vh] p-6 sm:p-10 md:p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+>
+  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+    Our Story
+  </h3>
+  <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-medium break-words">
+    Started in 2021 as Google Developer Student Clubs (GDSC), the club
+    transitioned to GDG on Campus in 2024. It&apos;s been an incredible 5-year
+    journey of innovation, collaboration, and growth — a community proudly
+    powered by{" "}
+    <span className="text-green-400">GoogleForDevs</span>. Over the years,
+    we&apos;ve empowered countless students to build & learn.
+  </p>
+</motion.div>
 
-            <motion.div
-              ref={card3Ref}
-              variants={cardVariants}
-              initial="hidden"
-              animate={isCard3InView ? "visible" : "hidden"}
-              className='h-[70vh] w-[60vh] p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3'
-            >
-              <h3 className='text-4xl font-bold mb-4'>Join Us</h3>
-              <p className='text-gray-300 mb-8 text-xl font-medium'>
-                Get involved in our upcoming events and connect with fellow developers.
-              </p>
-              <div className='relative'>
-                {/* Bars */}
-                <motion.div
-                  ref={quizOptionsRef}
-                  className='space-y-3 font-medium text-lg'
-                >
-                  <motion.div
-                    custom={0}
-                    variants={quizOptionVariants}
-                    initial="hidden"
-                    animate={isQuizOptionsInView ? "visible" : "hidden"}
-                    className='bg-[#EA4335] text-black px-6 py-3 rounded-lg w-3/4'
-                  >
-                    Innovate
-                  </motion.div>
-                  <motion.div
-                    custom={1}
-                    variants={quizOptionVariants}
-                    initial="hidden"
-                    animate={isQuizOptionsInView ? "visible" : "hidden"}
-                    className='bg-[#FBBC04] text-black px-6 py-3 rounded-lg w-3/4'
-                  >
-                    Collaborate 
-                  </motion.div>
-                  <motion.div
-                    custom={2}
-                    variants={quizOptionVariants}
-                    initial="hidden"
-                    animate={isQuizOptionsInView ? "visible" : "hidden"}
-                    className='bg-[#0F9D58] text-black px-6 py-3 rounded-lg w-3/4'
-                  >
-                    Create 
-                  </motion.div>
-                </motion.div>
+<motion.div
+  ref={card3Ref}
+  variants={cardVariants}
+  initial="hidden"
+  animate={isCard3InView ? "visible" : "hidden"}
+  className="h-[70vh] w-[60vh] p-6 sm:p-10 md:p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+>
+  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+    Join Us
+  </h3>
+  <p className="text-gray-300 mb-8 text-sm sm:text-base md:text-lg lg:text-xl font-medium break-words">
+    Get involved in our upcoming events and connect with fellow developers.
+  </p>
+  <div className="relative">
+    {/* Bars */}
+    <motion.div
+      ref={quizOptionsRef}
+      className="space-y-3 font-medium text-xs sm:text-sm md:text-base lg:text-lg"
+    >
+      <motion.div
+        custom={0}
+        variants={quizOptionVariants}
+        initial="hidden"
+        animate={isQuizOptionsInView ? "visible" : "hidden"}
+        className="bg-[#EA4335] text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg w-full max-w-sm"
+      >
+        Innovate
+      </motion.div>
+      <motion.div
+        custom={1}
+        variants={quizOptionVariants}
+        initial="hidden"
+        animate={isQuizOptionsInView ? "visible" : "hidden"}
+        className="bg-[#FBBC04] text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg w-full max-w-sm"
+      >
+        Collaborate
+      </motion.div>
+      <motion.div
+        custom={2}
+        variants={quizOptionVariants}
+        initial="hidden"
+        animate={isQuizOptionsInView ? "visible" : "hidden"}
+        className="bg-[#0F9D58] text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg w-full max-w-sm"
+      >
+        Create
+      </motion.div>
+    </motion.div>
 
-                {/* GIF Badge */}
-                <Image
-                  src='/globe.gif'
-                  alt='Animated Globe'
-                  width={240}
-                  height={200}
-                  className='absolute -right-11 top-1/2 -translate-y-1/2'
-                />
-              </div>
-            </motion.div>
+    {/* GIF Badge */}
+    <Image
+      src="/globe.gif"
+      alt="Animated Globe"
+      width={240}
+      height={200}
+      className="absolute -right-11 top-1/2 -translate-y-1/2"
+    />
+  </div>
+</motion.div>
+
           </motion.div>
         </div>
       </section>
