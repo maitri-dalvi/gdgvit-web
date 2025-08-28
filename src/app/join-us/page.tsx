@@ -6,7 +6,7 @@ const Interviews = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 px-4 py-8 sm:py-12 lg:py-16">
+      <main className="flex-1 px-4 py-8 sm:py-12 lg:py-12">
         <section className="mx-auto w-full max-w-screen-xl">
           {/* Header Section */}
           <div className="text-center mb-8 sm:mb-10 lg:mb-6">

@@ -36,7 +36,6 @@ const Hero = () => {
   
     <div className='relative flex min-h-[95vh] md:min-h-screen items-center justify-center overflow-hidden px-6 py-12 md:px-8 md:py-16 lg:px-14'>
       
-      {/* A content wrapper to constrain the max-width on very large screens and act as a positioning context for absolute elements */}
       <div className='relative w-full max-w-6xl text-center'>
         
         <motion.h1
@@ -78,7 +77,6 @@ const Hero = () => {
           <span className="block sm:inline">Mumbai</span>
         </motion.h1>
 
-        {/* --- Decorative SVGs with Responsive Positioning --- */}
 
         {/* Angular Brackets */}
         <motion.div 
@@ -86,7 +84,7 @@ const Hero = () => {
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 2.5 }}
         >
           <AngularBracket1 className='h-auto w-24 text-6xl sm:w-20 md:w-32 lg:w-40' />
         </motion.div>
@@ -96,31 +94,30 @@ const Hero = () => {
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 2.7 }}
         >
           <AngularBracket2 className='h-auto w-24 text-6xl sm:w-20 md:w-32 lg:w-40' />
         </motion.div>
 
-        {/* Creative Tech-Themed Elements for GDG - Clean & Simple */}
         
-        {/* Code Brackets - Properly positioned away from all text */}
         <motion.div 
-          className='absolute top-[5%] left-[5%] animate-pulse-slow text-yellow-500 text-3xl sm:text-4xl md:text-5xl font-mono opacity-100'
+          className='absolute top-[1%] left-[5%] animate-float-slow text-yellow-400 text-4xl sm:text-4xl md:text-5xl font-mono opacity-100'
+          style={{animationDelay: '0.8s'}}
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 3.1 }}
         >
           {'{ }'}
         </motion.div>
         
         <motion.div 
-          className='absolute top-[25%] right-[5%] animate-float-slow text-purple-400 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' 
+          className='absolute top-[25%] right-[5%] animate-wiggle text-purple-400 text-3xl sm:text-3xl md:text-4xl font-mono opacity-100' 
           style={{animationDelay: '0.8s'}}
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 1.0 }}
+          transition={{ delay: 3.1 }}
         >
           {'</>'}
         </motion.div>
@@ -132,7 +129,7 @@ const Hero = () => {
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 3.3 }}
         >
           {'01001'}
           <br />
@@ -145,7 +142,7 @@ const Hero = () => {
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 1.4 }}
+          transition={{ delay: 3.5 }}
         >
           {'1010'}
           <br />
@@ -154,23 +151,23 @@ const Hero = () => {
 
         {/* Side symbols - Far edges */}
         <motion.div 
-          className='absolute top-[45%] left-[1%] animate-float-slow text-green-400 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' 
+          className='absolute top-[42%] left-[1%] animate-wiggle text-green-300 text-3xl sm:text-3xl md:text-4xl font-mono opacity-100' 
           style={{animationDelay: '1.2s'}}
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 1.6 }}
+          transition={{ delay: 3.7 }}
         >
           {'()'}
         </motion.div>
 
         <motion.div 
-          className='absolute top-[45%] right-[1%] animate-pulse-slow text-blue-600 text-2xl sm:text-3xl md:text-4xl font-mono opacity-100' 
+          className='absolute top-[55%] right-[11%] animate-float-slow text-blue-400 text-4xl sm:text-3xl md:text-4xl font-mono opacity-100' 
           style={{animationDelay: '0.6s'}}
           variants={decorativeVariants}
           initial='hidden'
           animate={isHeadingInView ? "visible" : "hidden"}
-          transition={{ delay: 1.8 }}
+          transition={{ delay: 3.9 }}
         >
           {'@'}
         </motion.div>
@@ -178,10 +175,11 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 2.0, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
         >
           <Typewriter
             text='Converting Ideas Into Reality!'
+            startDelay={1000}
             // Responsive font size and margin-top for the typewriter text
             className='mt-12 text-center text-xl font-semibold text-gray-800 sm:mt-16 sm:text-2xl md:mt-20 md:text-3xl lg:text-4xl'
           />

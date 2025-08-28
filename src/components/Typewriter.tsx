@@ -5,9 +5,10 @@ import { Typewriter as TypewriterEffect } from 'react-simple-typewriter';
 interface Props {
   text: string;
   className?: string;
+  startDelay?: number;
 }
 
-export const Typewriter = ({ text, className }: Props) => {
+export const Typewriter = ({ text, className, startDelay = 0 }: Props) => {
   return (
     <h2 className={className}>
       <TypewriterEffect
@@ -17,7 +18,7 @@ export const Typewriter = ({ text, className }: Props) => {
         cursorStyle="|"
         typeSpeed={100}
         deleteSpeed={70}
-        delaySpeed={1000}
+        delaySpeed={startDelay}
       />
     </h2>
   );
