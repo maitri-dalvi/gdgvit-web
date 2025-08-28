@@ -108,7 +108,7 @@ const monthlyData = [
   {
     month: "June",
     title: "Code the Cloud Hackathon [GDG VIT x GDG Cloud Mumbai]",
-    bgColor: "#B8F2D1",
+    bgColor: "#dacafa",
     topics: [
       "Cloud Project Ideation",
       "Using Firebase & GCP",
@@ -123,7 +123,7 @@ const monthlyData = [
   {
     month: "August",
     title: "Spectrum - Flagship Event",
-    bgColor: "#dacafa",
+    bgColor: "#B8F2D1",
     topics: [
       "DSA",
       "CP",
