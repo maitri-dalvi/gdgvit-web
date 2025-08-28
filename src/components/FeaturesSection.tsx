@@ -117,7 +117,7 @@ const FeaturesSection = () => {
   variants={cardVariants}
   initial="hidden"
   animate={isCard1InView ? "visible" : "hidden"}
-  className="h-[70vh] w-[60vh] p-6 sm:p-10 md:p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+  className="h-[75vh] w-[60vh] xl:p-14 sm:p-10 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
 >
   <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-medium break-words">
     We believe in thinking beyond the conventional. A club&apos;s resources
@@ -126,9 +126,8 @@ const FeaturesSection = () => {
     that in mind, we host flagship events like{" "}
     <span className="text-blue-400">
       Hackbuild, Competitive Programming under
-      Spectrum
-    </span>
-    , along with a wide range of insightful workshops.
+      Spectrum </span>
+    and many insightful workshops.
   </p>
 </motion.div>
 
@@ -137,7 +136,7 @@ const FeaturesSection = () => {
   variants={cardVariants}
   initial="hidden"
   animate={isCard2InView ? "visible" : "hidden"}
-  className="h-[70vh] w-[60vh] p-6 sm:p-10 md:p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+  className="h-[75vh] w-[60vh] p-6 sm:p-9 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
 >
   <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
     Our Story
@@ -148,7 +147,7 @@ const FeaturesSection = () => {
     journey of innovation, collaboration, and growth — a community proudly
     powered by{" "}
     <span className="text-green-400">GoogleForDevs</span>. Over the years,
-    we&apos;ve empowered countless students to build & learn.
+    we&apos;ve empowered countless students to learn.
   </p>
 </motion.div>
 
@@ -157,7 +156,7 @@ const FeaturesSection = () => {
   variants={cardVariants}
   initial="hidden"
   animate={isCard3InView ? "visible" : "hidden"}
-  className="h-[70vh] w-[60vh] p-6 sm:p-10 md:p-16 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
+  className="h-[75vh] w-[60vh] p-6 sm:p-10 md:p-12 bg-[#212121] text-white border-none rounded-xl flex flex-col gap-3 overflow-hidden"
 >
   <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
     Join Us
@@ -206,7 +205,7 @@ const FeaturesSection = () => {
       alt="Animated Globe"
       width={240}
       height={200}
-      className="absolute -right-11 top-1/2 -translate-y-1/2"
+      className="absolute -right-13 top-1/2 -translate-y-1/2"
     />
   </div>
 </motion.div>
@@ -216,7 +215,7 @@ const FeaturesSection = () => {
       </section>
 
       {/* Mobile/Tablet Version - Vertical Stack */}
-      <section className='xl:hidden bg-black text-white py-12 sm:py-16 md:py-20 lg:py-24'>
+      <section className='xl:hidden bg-black text-white py-16 sm:py-20 md:py-24 lg:py-28'>
         <div className='container mx-auto px-4 sm:px-6 md:px-8 lg:px-12'>
           
           {/* Title Section */}
@@ -249,8 +248,14 @@ const FeaturesSection = () => {
               className='bg-[#212121] p-6 sm:p-8 md:p-10 lg:p-12 rounded-xl'
             >
               <p className='text-gray-300 text-base sm:text-lg md:text-xl font-medium leading-relaxed'>
-                We believe in thinking beyond the conventional. A club&apos;s resources shouldn&apos;t just be directed toward organizing events, but also towards fostering a culture of continuous learning and collaborative growth. With that in mind, we host flagship events like <span className="text-blue-400">Hackbuild, Open Source Sessions, and Competitive Programming under Spectrum</span>, along with a wide range of insightful workshops.
-              </p>
+ We believe in thinking beyond the conventional. A club&apos;s resources
+    shouldn&apos;t just be directed toward organizing events, but also towards
+    fostering a culture of continuous learning and collaborative growth. With
+    that in mind, we host flagship events like{" "}
+    <span className="text-blue-400">
+      Hackbuild, Competitive Programming under
+      Spectrum
+    </span> and many insightful workshops.              </p>
             </motion.div>
 
             {/* Card 2 */}
@@ -263,7 +268,7 @@ const FeaturesSection = () => {
             >
               <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6'>Our Story</h3>
               <p className='text-gray-300 text-base sm:text-lg md:text-xl font-medium leading-relaxed'>
-                Started in 2021 as Google Developer Student Clubs (GDSC), the club transitioned to GDG on Campus in 2024. It&apos;s been an incredible 5-year journey of innovation, collaboration, and growth — a community proudly powered by <span className="text-green-400">GoogleForDevs</span>. Over the years, we&apos;ve empowered countless students to build & learn.
+                Started in 2021 as Google Developer Student Clubs (GDSC), the club transitioned to GDG on Campus in 2024. It&apos;s been an incredible 5-year journey of innovation, collaboration, and growth — a community proudly powered by <span className="text-green-400">GoogleForDevs</span>. Over the years, we&apos;ve empowered countless students to learn.
               </p>
             </motion.div>
 
