@@ -14,7 +14,7 @@ const Interviews = () => {
               Apply to Join Us!
             </h1>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-              We're excited to hear from you! Please fill out the form below to start your application process.
+              We&apos;re excited to hear from you! Please fill out the form below to start your application process.
             </p>
           </div>
 
