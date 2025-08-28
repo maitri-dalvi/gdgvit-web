@@ -145,7 +145,7 @@ export default function Team() {
               Meet The Leads
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              The amazing people behind our community <span>&lt;3</span>
+              The amazing people behind our community <i className="fa-regular fa-heart text-sm"></i>
             </p>
           </motion.div>
 
