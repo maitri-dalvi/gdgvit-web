@@ -244,23 +244,23 @@ export default function Team() {
     </motion.div>
   ))}
 
-{/* "See more" card as part of grid*/}
+{/* "See more" card as part of grid - Mobile responsive */}
 <motion.div
-  className="polaroid-card relative self-center lg:ml-76 cursor-pointer"
+  className="polaroid-card relative self-center lg:ml-76 cursor-pointer w-full max-w-xs"
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 0.3 }}
   viewport={{ once: true }}
 >
   <Link href="/core" className="block w-full h-full">
-    <div className="bg-white p-8 shadow-xl border border-gray-200 transform rotate-1 w-93 h-45 flex flex-col justify-center items-center text-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-lg relative">
+    <div className="bg-white p-6 md:p-8 shadow-xl border border-gray-200 transform rotate-1 w-full h-auto min-h-[180px] md:w-93 md:h-45 flex flex-col justify-center items-center text-center hover:scale-[1.03] transition-transform duration-300 hover:shadow-lg relative">
       {/* Tape effect */}
       <div className="absolute -top-2 -right-2 w-12 h-6 bg-yellow-100 opacity-80 -rotate-45 shadow-sm border border-yellow-200" />
 
-      <h2 className="text-purple-600 font-bold text-2xl">
+      <h2 className="text-purple-600 font-bold text-xl md:text-2xl">
         📸 See more cool peeps!
       </h2>
-      <p className="text-base text-gray-500 mt-2">
+      <p className="text-sm md:text-base text-gray-500 mt-2 px-2">
         *Click to discover more amazing team members*
       </p>
     </div>
@@ -306,4 +306,3 @@ export default function Team() {
     </>
   );
 }
-
