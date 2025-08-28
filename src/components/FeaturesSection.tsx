@@ -125,7 +125,7 @@ const FeaturesSection = () => {
     fostering a culture of continuous learning and collaborative growth. With
     that in mind, we host flagship events like{" "}
     <span className="text-blue-400">
-      Hackbuild, Capture the Flag (CTF), and Competitive Programming under
+      Hackbuild, Competitive Programming under
       Spectrum
     </span>
     , along with a wide range of insightful workshops.
@@ -249,7 +249,7 @@ const FeaturesSection = () => {
               className='bg-[#212121] p-6 sm:p-8 md:p-10 lg:p-12 rounded-xl'
             >
               <p className='text-gray-300 text-base sm:text-lg md:text-xl font-medium leading-relaxed'>
-                We believe in thinking beyond the conventional. A club&apos;s resources shouldn&apos;t just be directed toward organizing events, but also towards fostering a culture of continuous learning and collaborative growth. With that in mind, we host flagship events like <span className="text-blue-400">Hackbuild, Capture the Flag (CTF), and Competitive Programming under Spectrum</span>, along with a wide range of insightful workshops.
+                We believe in thinking beyond the conventional. A club&apos;s resources shouldn&apos;t just be directed toward organizing events, but also towards fostering a culture of continuous learning and collaborative growth. With that in mind, we host flagship events like <span className="text-blue-400">Hackbuild, Open Source Sessions, and Competitive Programming under Spectrum</span>, along with a wide range of insightful workshops.
               </p>
             </motion.div>
 
