@@ -11,21 +11,18 @@ import { useEffect, useRef } from "react";
 // import MobileWarningModal from "@/components/MobileWarningModal"; 
 
 export default function Home() {
-  const navbarRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // Scroll to top navbar on page load/reload
-    if (navbarRef.current) {
-      navbarRef.current.scrollIntoView({ behavior: 'smooth' });
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      navbar.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
 
   return (
     <>
       <div className="min-h-screen relative">
-        <div ref={navbarRef}>
-          <Navbar />
-        </div>
+        <Navbar />
         {/* <MobileWarningModal />  */}
         <Hero />
         <FeaturesSection />

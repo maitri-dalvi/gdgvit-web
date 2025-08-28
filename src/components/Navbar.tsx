@@ -13,10 +13,30 @@ import {
 } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hideNavbar, setHideNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Find the FeaturesSection element
+      const featuresSection = document.querySelector('[data-section="features"]');
+      
+      if (featuresSection) {
+        const rect = featuresSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Hide navbar when FeaturesSection is in view (with some threshold)
+        const isFeaturesSectionVisible = rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.5;
+        setHideNavbar(isFeaturesSectionVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { label: 'Spectrum', href: 'https://spectrum.gdgvitm.tech/', external: true },
@@ -40,7 +60,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full top-0 sticky z-50 px-4 md:px-8 lg:px-16 bg-[#FDFAF5] shadow-md transition-all duration-300">
+    <nav 
+      id="navbar" 
+      className={`w-full z-50 px-4 md:px-8 lg:px-16 bg-[#FDFAF5] shadow-md transition-all duration-300 ${
+        hideNavbar 
+          ? 'fixed top-0 -translate-y-full' 
+          : 'sticky top-0'
+      }`}
+    >
       <div className="relative container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Left: Logo */}
         <Link

@@ -92,6 +92,7 @@ const FeaturesSection = () => {
       {/* Desktop Version - Horizontal Scroll */}
       <section
         ref={sectionRef}
+        data-section="features"
         className='hidden xl:block bg-black relative h-[300vh] flex flex-col'
       >
         {/* Sticky container to maintain position during scroll */}
@@ -215,7 +216,7 @@ const FeaturesSection = () => {
       </section>
 
       {/* Mobile/Tablet Version - Vertical Stack */}
-      <section className='xl:hidden bg-black text-white py-16 sm:py-20 md:py-24 lg:py-28'>
+      <section data-section="features" className='xl:hidden bg-black text-white py-16 sm:py-20 md:py-24 lg:py-28'>
         <div className='container mx-auto px-4 sm:px-6 md:px-8 lg:px-12'>
           
           {/* Title Section */}
