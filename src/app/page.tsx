@@ -12,11 +12,24 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    // Scroll to top navbar on page load/reload
-    const navbar = document.getElementById('navbar');
-    if (navbar) {
-      navbar.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Scroll behavior on page load/reload
+    const scrollToTop = () => {
+      // Check if it's a mobile device (screen width less than 768px)
+      const isMobile = window.innerWidth < 768;
+      
+      if (isMobile) {
+        // Mobile: scroll to absolute top of page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        // Desktop: original working behavior - just scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    // Small delay to ensure page is fully loaded
+    const timer = setTimeout(scrollToTop, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (
