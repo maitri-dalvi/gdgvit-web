@@ -2,7 +2,7 @@
 import { FaLink } from "react-icons/fa";
 import { 
   FaXTwitter, FaGithub, FaInstagram, FaMedium, 
-  FaGoogle, FaLinkedinIn, FaStar, 
+  FaGoogle, FaLinkedinIn,
   FaWhatsapp
 } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
