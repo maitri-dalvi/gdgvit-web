@@ -99,7 +99,7 @@ const FeaturesSection = () => {
           {/* Title with fixed position */}
           <motion.div
             style={{ x: xPosition }}
-            className='w-[300vh] h-screen flex justify-around items-center absolute left-0 top-10 p-16 text-white'
+            className='w-[300vh] h-screen flex justify-around items-center absolute left-0 top-0 p-16 text-white'
           >
             <div className=''>
               <span className='inline-block text-orange font-bold text-9xl -rotate-[20deg]'>
