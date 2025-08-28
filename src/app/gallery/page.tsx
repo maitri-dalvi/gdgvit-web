@@ -31,7 +31,7 @@ interface GridProps {
 
 const Gallery = () => {
   const images: ImageData[] = [
-    // First gallery grid images
+    // Second gallery grid images
     { size: "600x400", src: "/gallery/1.png" },
     { size: "300x400", src: "/gallery/2.jpg" },
     { size: "300x200", src: "/gallery/3.jpg" },
@@ -42,7 +42,7 @@ const Gallery = () => {
     { size: "300x250", src: "/gallery/8.jpg" },
     { size: "300x250", src: "/gallery/9.jpg" },
     { size: "600x250", src: "/gallery/10.jpg" },
-    // Second gallery grid images
+    // Third gallery grid images
     { size: "600x400", src: "/gallery/11.jpg" },
     { size: "300x400", src: "/gallery/12.jpg" },
     { size: "300x200", src: "/gallery/13.jpg" },
@@ -53,6 +53,17 @@ const Gallery = () => {
     { size: "300x250", src: "/gallery/18.jpg" },
     { size: "300x250", src: "/gallery/19.jpg" },
     { size: "600x250", src: "/gallery/20.jpg" },
+    // First gallery grid images
+    { size: "600x400", src: "/gallery/21.jpg" },
+    { size: "300x400", src: "/gallery/22.jpg" },
+    { size: "300x200", src: "/gallery/23.jpg" },
+    { size: "300x200", src: "/gallery/24.jpg" },
+    { size: "400x250", src: "/gallery/25.jpg" },
+    { size: "400x250", src: "/gallery/26.jpg" },
+    { size: "400x250", src: "/gallery/27.jpg" },
+    { size: "300x250", src: "/gallery/28.jpg" },
+    { size: "300x250", src: "/gallery/29.jpg" },
+    { size: "600x250", src: "/gallery/30.jpg" },
   ];
 
   const PlaceholderImage = ({ size, src }: PlaceholderImageProps) => {
@@ -184,8 +195,17 @@ const Gallery = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto p-3 sm:pt-11 pb-25">
+      <div className="max-w-7xl mx-auto p-3 pt-8 sm:pt-11 pb-25">
         <div className="space-y-6 sm:space-y-8">
+          {/* New Tablet Grid Section - Top */}
+          <div>
+            <GalleryGrid startIndex={20} />
+            
+            <TabletGrid startIndex={20} />
+            
+            <MobileGrid startIndex={20} />
+          </div>
+
           {/* First Gallery Section */}
           <div>
             <GalleryGrid startIndex={0} />
