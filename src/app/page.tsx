@@ -7,7 +7,7 @@ import TimelineSection from "@/components/TimelineSection";
 import Footer from "@/components/Footer";
 import FeaturesSection from "@/components/FeaturesSection";
 import Moments from "@/components/Moments";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 // import MobileWarningModal from "@/components/MobileWarningModal"; 
 
 export default function Home() {
