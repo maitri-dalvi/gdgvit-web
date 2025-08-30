@@ -4,13 +4,13 @@
  </picture>
  GDG VIT Mumbai
 </h1>
-Google Developer Groups on Campus official website
+Google Developer Groups on Campus • VIT, Mumbai official website
 
 ## About The Project
 
-This is the official website for the Vidyalankar Institute of Technology Google Developer Group (GDG VIT Mumbai).
+This is the official website for the community, Google Developer Groups on campus - VIT, Mumbai.
 
-Google Developer Group (GDG) is a student-led community backed by Google Developers aimed at empowering undergraduate students from all disciplines to grow their knowledge in technology, build solutions for their local communities, and connect with other members from the Google community.
+Google Developer Groups (GDG) is a student-led community backed by Google Developers aimed at empowering undergraduate students from all disciplines to grow their knowledge in technology, build solutions for their local communities, and connect with other members from the Google community.
 
 ## Getting Started
 
